@@ -1,0 +1,3 @@
+/home/rizoma/dev/cyberchess/build/CMakeFiles/rebuild_cache.dir
+/home/rizoma/dev/cyberchess/build/CMakeFiles/edit_cache.dir
+/home/rizoma/dev/cyberchess/build/CMakeFiles/main.dir
