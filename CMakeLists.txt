@@ -3,5 +3,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 project(Cyberchess)
+add_subdirectory(lib)
+add_subdirectory(lib/point)
 
 add_executable(main main.cpp)
+
+target_link_libraries(main PUBLIC Point)

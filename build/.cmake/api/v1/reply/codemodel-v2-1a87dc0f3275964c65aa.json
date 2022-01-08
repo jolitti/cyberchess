@@ -6,12 +6,41 @@
 			[
 				{
 					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "lib",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib"
+				},
+				{
+					"build" : "lib/point",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib/point",
 					"targetIndexes" : 
 					[
 						0
@@ -24,21 +53,31 @@
 				{
 					"directoryIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					],
 					"name" : "Cyberchess",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
 			"targets" : 
 			[
 				{
+					"directoryIndex" : 2,
+					"id" : "Point::@3fb2aa857b54c198f710",
+					"jsonFile" : "target-Point-Debug-3a20dc1829ca4a4efd89.json",
+					"name" : "Point",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-133e8d405da4b67e736e.json",
+					"jsonFile" : "target-main-Debug-43291a59b35080821900.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}

@@ -1,9 +1,12 @@
 #include <iostream>
 #include "lib/Chess.h"
-using std::cout, chess::color, chess::piece;
+#include "lib/point/Point.h"
+using std::cout, chess::color, chess::piece, chess::Point;
 
 int main()
 {
     piece p = piece::pawn;
+    Point pp {1,1};
     cout<<"Hello, world!\n";
+    cout<<pp<<"\n";
 }

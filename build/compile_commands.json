@@ -3,5 +3,10 @@
   "directory": "/home/rizoma/dev/cyberchess/build",
   "command": "/bin/x86_64-linux-gnu-g++-11   -g -std=gnu++17 -o CMakeFiles/main.dir/main.cpp.o -c /home/rizoma/dev/cyberchess/main.cpp",
   "file": "/home/rizoma/dev/cyberchess/main.cpp"
+},
+{
+  "directory": "/home/rizoma/dev/cyberchess/build/lib/point",
+  "command": "/bin/x86_64-linux-gnu-g++-11   -g -std=gnu++17 -o CMakeFiles/Point.dir/Point.cpp.o -c /home/rizoma/dev/cyberchess/lib/point/Point.cpp",
+  "file": "/home/rizoma/dev/cyberchess/lib/point/Point.cpp"
 }
 ]

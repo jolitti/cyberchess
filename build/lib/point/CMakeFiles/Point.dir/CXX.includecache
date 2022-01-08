@@ -10,17 +10,13 @@
 string
 -
 
+/home/rizoma/dev/cyberchess/lib/point/Point.cpp
+Point.h
+/home/rizoma/dev/cyberchess/lib/point/Point.h
+
 /home/rizoma/dev/cyberchess/lib/point/Point.h
 ../Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
 iostream
 -
-
-/home/rizoma/dev/cyberchess/main.cpp
-iostream
--
-lib/Chess.h
-/home/rizoma/dev/cyberchess/lib/Chess.h
-lib/point/Point.h
-/home/rizoma/dev/cyberchess/lib/point/Point.h
 
