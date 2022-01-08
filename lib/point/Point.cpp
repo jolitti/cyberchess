@@ -10,6 +10,8 @@ namespace chess
 
     Point Point::operator*(const int i) const { return Point(x*i,y*i); }
 
+    bool Point::operator==(const Point& p) const { return x==p.x && y == p.y; }
+
     bool Point::inBoard() const 
     {
         return x>=0 && x<BOARD_SIZE
@@ -19,7 +21,7 @@ namespace chess
     string Point::toString() const
     {
         if (!inBoard()) return INVALID_POS;
-        else return LETTERS.at(x) + std::to_string(y);
+        else return LETTERS.at(x) + std::to_string(y+1);
     }
 
     ostream& operator<< (ostream& o, const Point& p)
@@ -27,4 +29,9 @@ namespace chess
         o << p.toString();
         return o;
     }
+}
+
+std::size_t std::hash<chess::Point>::operator() (const chess::Point& p)
+{
+    return std::hash<string>()(p.toString());
 }

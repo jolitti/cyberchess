@@ -2,7 +2,8 @@
 #define CHESS_H
 
 #include <string>
-using std::string;
+#include <map>
+using std::string, std::map;
 
 
 // Collection of all chess-related names
@@ -31,6 +32,26 @@ namespace chess
         rook,
         queen,
         king
+    };
+
+    // Map from initial letter (in italian) to piece
+    const map<string,piece> LETTER_TO_PIECE_IT = 
+    {
+        // Uppercase
+        {"P",pawn},
+        {"A",bishop},
+        {"C",knight},
+        {"T",rook},
+        {"D",queen},
+        {"R",king},
+
+        // Lowercase
+        {"p",pawn},
+        {"a",bishop},
+        {"c",knight},
+        {"t",rook},
+        {"d",queen},
+        {"r",king}
     };
 }
 

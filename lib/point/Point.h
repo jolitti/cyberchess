@@ -21,6 +21,8 @@ namespace chess
         Point operator- (const Point& p) const;
         Point operator* (const int i) const;
 
+        bool operator== (const Point& p) const;
+
         // Is this point inside a standard chess board?
         bool inBoard() const;
 
@@ -30,5 +32,11 @@ namespace chess
         friend ostream& operator<< (ostream& o, const Point& p);
     };
 }
+
+template <>
+struct std::hash<chess::Point>
+{
+    std::size_t operator() (const chess::Point& p);
+};
 
 #endif

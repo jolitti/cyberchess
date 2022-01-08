@@ -9,6 +9,8 @@
 /home/rizoma/dev/cyberchess/lib/Chess.h
 string
 -
+map
+-
 
 /home/rizoma/dev/cyberchess/lib/point/Point.h
 ../Chess.h
