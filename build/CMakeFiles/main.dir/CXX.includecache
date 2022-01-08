@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
+/home/rizoma/dev/cyberchess/lib/Chess.h
+
 /home/rizoma/dev/cyberchess/main.cpp
 iostream
 -
+lib/Chess.h
+/home/rizoma/dev/cyberchess/lib/Chess.h
 
