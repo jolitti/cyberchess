@@ -17,7 +17,7 @@ namespace chess
     {  
     private:
         // Every piece on the board, mapped to their position
-        unordered_map<Point,Piece> pieces;
+        vector<vector<Piece>> pieces;
         // History of the moves taken on the board
         vector<Move> moves;
     
