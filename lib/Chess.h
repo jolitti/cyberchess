@@ -6,9 +6,15 @@
 using std::string, std::map;
 
 
+
 // Collection of all chess-related names
 namespace chess
 {   
+    // Predefinitions to allow cyclic reference
+    class Piece;
+    class Board;
+    class Move;
+
     // Letters for the x coordinates on the chessboard
     const string LETTERS = "ABCDEFGH";
     // Number of cells on a side of the board
@@ -54,5 +60,9 @@ namespace chess
         {"r",king}
     };
 }
+
+#include "board/Board.h"
+#include "move/Move.h"
+#include "piece/Piece.h"
 
 #endif

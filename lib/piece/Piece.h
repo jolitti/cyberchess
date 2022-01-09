@@ -18,11 +18,18 @@ namespace chess
         color pieceColor;
         Point position;
         Board& boardRef;
+
+        
     public:
+        Piece();
+        Piece(Point _position, color _piececolor, Board& _boardRef):
+        position{_position},pieceColor{_piececolor},boardRef{_boardRef} {};
+
         virtual piece getPieceType() const = 0;
+        virtual color getColor() const = 0;
 
         // Get character that represents this piece (e.g p for a black pawn)
-        virtual char toString() const = 0;
+        virtual char toChar() const = 0;
 
         // Get list of all legal moves this piece can perform
         virtual vector<Move> getMoves() const = 0;
