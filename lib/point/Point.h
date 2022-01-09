@@ -3,7 +3,7 @@
 
 #include "../Chess.h"
 #include <iostream>
-using std::ostream;
+using std::ostream, std::pair;
 
 namespace chess
 {
@@ -28,6 +28,9 @@ namespace chess
 
         // String representation of this position (e.g "A1")
         string toString() const;
+
+        // Conversion to int,int pair for unpacking
+        pair<int,int> toPair() const;
 
         friend ostream& operator<< (ostream& o, const Point& p);
     };

@@ -23,6 +23,7 @@ namespace chess
         if (!inBoard()) return INVALID_POS;
         else return LETTERS.at(x) + std::to_string(y+1);
     }
+    pair<int,int> Point::toPair() const { return pair<int,int> {x,y}; }
 
     ostream& operator<< (ostream& o, const Point& p)
     { 
