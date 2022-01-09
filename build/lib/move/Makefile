@@ -99,14 +99,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles /home/rizoma/dev/cyberchess/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/rizoma/dev/cyberchess/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles /home/rizoma/dev/cyberchess/build/lib/move//CMakeFiles/progress.marks
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/move/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/move/clean
 .PHONY : clean
 
 # The main clean target
@@ -116,97 +116,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/move/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/move/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/rizoma/dev/cyberchess/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+lib/move/CMakeFiles/Move.dir/rule:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/move/CMakeFiles/Move.dir/rule
+.PHONY : lib/move/CMakeFiles/Move.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# Convenience name for target.
+Move: lib/move/CMakeFiles/Move.dir/rule
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named Point
-
-# Build rule for target.
-Point: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Point
-.PHONY : Point
-
-# fast build rule for target.
-Point/fast:
-	$(MAKE) $(MAKESILENT) -f lib/point/CMakeFiles/Point.dir/build.make lib/point/CMakeFiles/Point.dir/build
-.PHONY : Point/fast
-
-#=============================================================================
-# Target rules for targets named Pawn
-
-# Build rule for target.
-Pawn: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pawn
-.PHONY : Pawn
-
-# fast build rule for target.
-Pawn/fast:
-	$(MAKE) $(MAKESILENT) -f lib/piece/CMakeFiles/Pawn.dir/build.make lib/piece/CMakeFiles/Pawn.dir/build
-.PHONY : Pawn/fast
-
-#=============================================================================
-# Target rules for targets named Move
-
-# Build rule for target.
-Move: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Move
 .PHONY : Move
 
 # fast build rule for target.
 Move/fast:
-	$(MAKE) $(MAKESILENT) -f lib/move/CMakeFiles/Move.dir/build.make lib/move/CMakeFiles/Move.dir/build
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/move/CMakeFiles/Move.dir/build.make lib/move/CMakeFiles/Move.dir/build
 .PHONY : Move/fast
 
-main.o: main.cpp.o
+Move.o: Move.cpp.o
 
-.PHONY : main.o
+.PHONY : Move.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+Move.cpp.o:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/move/CMakeFiles/Move.dir/build.make lib/move/CMakeFiles/Move.dir/Move.cpp.o
+.PHONY : Move.cpp.o
 
-main.i: main.cpp.i
+Move.i: Move.cpp.i
 
-.PHONY : main.i
+.PHONY : Move.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+Move.cpp.i:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/move/CMakeFiles/Move.dir/build.make lib/move/CMakeFiles/Move.dir/Move.cpp.i
+.PHONY : Move.cpp.i
 
-main.s: main.cpp.s
+Move.s: Move.cpp.s
 
-.PHONY : main.s
+.PHONY : Move.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+Move.cpp.s:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/move/CMakeFiles/Move.dir/build.make lib/move/CMakeFiles/Move.dir/Move.cpp.s
+.PHONY : Move.cpp.s
 
 # Help Target
 help:
@@ -217,12 +180,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Move"
-	@echo "... Pawn"
-	@echo "... Point"
-	@echo "... main"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Move.o"
+	@echo "... Move.i"
+	@echo "... Move.s"
 .PHONY : help
 
 
@@ -234,6 +194,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/rizoma/dev/cyberchess/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

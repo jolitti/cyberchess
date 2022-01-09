@@ -2,8 +2,6 @@
 #define MOVE_H
 
 #include "../Chess.h"
-#include "../piece/Piece.h"
-#include "../board/Board.h"
 
 namespace chess
 {
@@ -13,14 +11,15 @@ namespace chess
     protected:
         // The piece that has to be moved as a result of this operation
         Piece &toMove;
-        Point &destination;
+        Point destination;
 
         // Flag to be set to true after move execution
         bool hasBeenExecuted;
         // String representation to be computed at creation
         string repr;
+        
     public:
-        Move(Piece &_toMove, Point &_destination);
+        Move(Piece &_toMove, Point _destination);
         
         // Changes the position of the referenced piece in its referenced board
         // Exepts if the move has already happened

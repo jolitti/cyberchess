@@ -8,5 +8,15 @@
   "directory": "/home/rizoma/dev/cyberchess/build/lib/point",
   "command": "/bin/x86_64-linux-gnu-g++-11   -g -std=gnu++17 -o CMakeFiles/Point.dir/Point.cpp.o -c /home/rizoma/dev/cyberchess/lib/point/Point.cpp",
   "file": "/home/rizoma/dev/cyberchess/lib/point/Point.cpp"
+},
+{
+  "directory": "/home/rizoma/dev/cyberchess/build/lib/piece",
+  "command": "/bin/x86_64-linux-gnu-g++-11   -g -std=gnu++17 -o CMakeFiles/Pawn.dir/pawn/Pawn.cpp.o -c /home/rizoma/dev/cyberchess/lib/piece/pawn/Pawn.cpp",
+  "file": "/home/rizoma/dev/cyberchess/lib/piece/pawn/Pawn.cpp"
+},
+{
+  "directory": "/home/rizoma/dev/cyberchess/build/lib/move",
+  "command": "/bin/x86_64-linux-gnu-g++-11   -g -std=gnu++17 -o CMakeFiles/Move.dir/Move.cpp.o -c /home/rizoma/dev/cyberchess/lib/move/Move.cpp",
+  "file": "/home/rizoma/dev/cyberchess/lib/move/Move.cpp"
 }
 ]

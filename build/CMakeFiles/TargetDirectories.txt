@@ -6,3 +6,11 @@
 /home/rizoma/dev/cyberchess/build/lib/point/CMakeFiles/rebuild_cache.dir
 /home/rizoma/dev/cyberchess/build/lib/point/CMakeFiles/edit_cache.dir
 /home/rizoma/dev/cyberchess/build/lib/point/CMakeFiles/Point.dir
+/home/rizoma/dev/cyberchess/build/lib/piece/CMakeFiles/rebuild_cache.dir
+/home/rizoma/dev/cyberchess/build/lib/piece/CMakeFiles/edit_cache.dir
+/home/rizoma/dev/cyberchess/build/lib/piece/CMakeFiles/Pawn.dir
+/home/rizoma/dev/cyberchess/build/lib/board/CMakeFiles/rebuild_cache.dir
+/home/rizoma/dev/cyberchess/build/lib/board/CMakeFiles/edit_cache.dir
+/home/rizoma/dev/cyberchess/build/lib/move/CMakeFiles/rebuild_cache.dir
+/home/rizoma/dev/cyberchess/build/lib/move/CMakeFiles/edit_cache.dir
+/home/rizoma/dev/cyberchess/build/lib/move/CMakeFiles/Move.dir

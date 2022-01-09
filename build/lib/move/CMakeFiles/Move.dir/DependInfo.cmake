@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rizoma/dev/cyberchess/main.cpp" "/home/rizoma/dev/cyberchess/build/CMakeFiles/main.dir/main.cpp.o"
+  "/home/rizoma/dev/cyberchess/lib/move/Move.cpp" "/home/rizoma/dev/cyberchess/build/lib/move/CMakeFiles/Move.dir/Move.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,9 +14,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/rizoma/dev/cyberchess/build/lib/point/CMakeFiles/Point.dir/DependInfo.cmake"
-  "/home/rizoma/dev/cyberchess/build/lib/piece/CMakeFiles/Pawn.dir/DependInfo.cmake"
-  "/home/rizoma/dev/cyberchess/build/lib/move/CMakeFiles/Move.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

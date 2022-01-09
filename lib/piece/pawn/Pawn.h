@@ -8,10 +8,9 @@ namespace chess
     class Pawn : public Piece
     {
     public:
-        Pawn(Point _position, color _pieceColor);
+        Pawn(Point _position, color _pieceColor, Board& _boardRef);
 
         piece getPieceType() const override;
-        color getColor() const override;
 
         char toChar() const override;
 

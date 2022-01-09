@@ -1,0 +1,2 @@
+/bin/x86_64-linux-gnu-ar qc libPawn.a CMakeFiles/Pawn.dir/pawn/Pawn.cpp.o
+/bin/x86_64-linux-gnu-ranlib libPawn.a

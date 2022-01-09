@@ -25,13 +25,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 9,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 11,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 16,
 				"parent" : 0
 			}
 		]
@@ -60,6 +72,14 @@
 		{
 			"backtrace" : 2,
 			"id" : "Point::@3fb2aa857b54c198f710"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "Pawn::@69dcc5b2cab78b8041fa"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "Move::@f89ac0e38dd1a99d865d"
 		}
 	],
 	"id" : "main::@6890427a1f51a3e7e1df",
@@ -78,6 +98,16 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "lib/point/libPoint.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "lib/piece/libPawn.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "lib/move/libMove.a",
 				"role" : "libraries"
 			}
 		],
