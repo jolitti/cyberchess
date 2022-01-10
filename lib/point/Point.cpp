@@ -31,8 +31,3 @@ namespace chess
         return o;
     }
 }
-
-std::size_t std::hash<chess::Point>::operator() (const chess::Point& p)
-{
-    return std::hash<string>()(p.toString());
-}

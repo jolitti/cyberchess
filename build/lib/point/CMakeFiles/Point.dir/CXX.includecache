@@ -6,10 +6,8 @@
 
 #IncludeRegexTransform: 
 
-/home/rizoma/dev/cyberchess/lib/Chess.h
+/home/rizoma/dev/cyberchess/lib/ChessConsts.h
 string
--
-map
 -
 
 /home/rizoma/dev/cyberchess/lib/point/Point.cpp
@@ -17,8 +15,10 @@ Point.h
 /home/rizoma/dev/cyberchess/lib/point/Point.h
 
 /home/rizoma/dev/cyberchess/lib/point/Point.h
-../Chess.h
-/home/rizoma/dev/cyberchess/lib/Chess.h
+../ChessConsts.h
+/home/rizoma/dev/cyberchess/lib/ChessConsts.h
 iostream
+-
+string
 -
 

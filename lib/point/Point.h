@@ -1,9 +1,11 @@
 #ifndef POINT_H
 #define POINT_H
 
-#include "../Chess.h"
+#include "../ChessConsts.h"
+
 #include <iostream>
-using std::ostream, std::pair;
+#include <string>
+using std::ostream, std::pair, std::string;
 
 namespace chess
 {
@@ -35,12 +37,6 @@ namespace chess
         friend ostream& operator<< (ostream& o, const Point& p);
     };
 }
-
-template <>
-struct std::hash<chess::Point>
-{
-    std::size_t operator() (const chess::Point& p);
-};
 
 // Standard directions
 const chess::Point up {0,1};

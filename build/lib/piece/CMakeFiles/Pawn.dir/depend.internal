@@ -3,6 +3,7 @@
 
 lib/piece/CMakeFiles/Pawn.dir/pawn/Pawn.cpp.o
  /home/rizoma/dev/cyberchess/lib/Chess.h
+ /home/rizoma/dev/cyberchess/lib/ChessConsts.h
  /home/rizoma/dev/cyberchess/lib/board/Board.h
  /home/rizoma/dev/cyberchess/lib/move/Move.h
  /home/rizoma/dev/cyberchess/lib/piece/Piece.h

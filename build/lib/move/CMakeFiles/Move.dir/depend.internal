@@ -3,6 +3,7 @@
 
 lib/move/CMakeFiles/Move.dir/Move.cpp.o
  /home/rizoma/dev/cyberchess/lib/Chess.h
+ /home/rizoma/dev/cyberchess/lib/ChessConsts.h
  /home/rizoma/dev/cyberchess/lib/board/Board.h
  /home/rizoma/dev/cyberchess/lib/move/Move.cpp
  /home/rizoma/dev/cyberchess/lib/move/Move.h
