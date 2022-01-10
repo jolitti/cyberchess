@@ -10,7 +10,9 @@ namespace chess
     {
     protected:
         // The piece that has to be moved as a result of this operation
-        Piece& toMove;
+        //Piece& toMove;
+
+        Point start;
         Point destination;
 
         // Flag to be set to true after move execution
@@ -19,7 +21,8 @@ namespace chess
         string repr;
         
     public:
-        Move(Piece& _toMove, Point _destination);
+        //Move(Piece& _toMove, Point _destination);
+        Move (Point _start, Point _destination);
         
         // Changes the position of the referenced piece in its referenced board
         // Exepts if the move has already happened

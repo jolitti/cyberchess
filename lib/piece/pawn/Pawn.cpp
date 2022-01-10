@@ -6,7 +6,7 @@ namespace chess
     {
         position = _position;
         pieceColor = _pieceColor;
-        boardRef = _boardRef;
+        boardRef = &_boardRef;
     }
 
     piece Pawn::getPieceType() const { return pawn; }

@@ -2,11 +2,11 @@
 
 namespace chess
 {
-    Move::Move(Piece& _toMove, Point _destination):
-    toMove {_toMove}, destination {_destination} 
+    Move::Move(Point _start, Point _destination):
+    start {_start}, destination {_destination} 
     {
         // Preprocessing of the string representation
-        repr = toMove.getPos().toString() + " " + destination.toString();
+        repr = start.toString() + " " + destination.toString();
     }
 
     string Move::toString() const { return repr; }

@@ -15,7 +15,7 @@ namespace chess
     protected:
         color pieceColor;
         Point position;
-        Board& boardRef;
+        Board* boardRef;
 
         
     public:

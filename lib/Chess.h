@@ -3,7 +3,7 @@
 
 #include <string>
 #include <map>
-using std::string, std::map;
+using std::string, std::map, std::reference_wrapper;
 
 #include "point/Point.h"
 
