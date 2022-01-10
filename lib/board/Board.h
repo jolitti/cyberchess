@@ -24,6 +24,24 @@ namespace chess
     public:
         // Default constructor (initial state of a chess board)
         Board();
+
+        //print current state of the board
+        void print() const;
+
+        //add a new move into "moves" vector  
+        void save_move(Move move);
+
+        //returns the size of vector moves
+        unsigned int get_history_size() const;
+
+        //given index, returns associated move
+        Move get_move(unsigned int index) const;
+
+        //updates pieces vector with the given move: returns false if start is empty
+        bool set_move(Point start, Point end); 
+
+
+
     };
 }
 #endif
