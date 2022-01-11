@@ -5,6 +5,7 @@
 
 namespace chess
 {
+    // Implementation of the Piece class into a standard chess Pawn
     class Pawn : public Piece
     {
     public:

@@ -24,6 +24,12 @@ namespace chess
     public:
         // Default constructor (initial state of a chess board)
         Board();
+
+        // Build board based on string representation
+        Board(const string& seed);
+
+        // Get corresponding piece in the 2d vector (or null if place is empty)
+        Piece& getPieceAt(const Point& position) const;
     };
 }
 #endif
