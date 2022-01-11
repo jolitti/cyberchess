@@ -15,11 +15,18 @@ namespace chess
 
     vector<Move> Pawn::getMoves() const
     {
+        vector<Move> ans;
         // "forward" move direction, adjusted by color
         Point forward = pieceColor==color::white ? up : down;
 
+        // Forward move
+        Point advance = position + forward;
+        if (advance.inBoard())
+        {   // Add forward move if destination is empty
+            if (boardRef->getPieceAt(advance) == nullptr) ans.push_back(Move(position,advance));
+        }
 
         //TODO
-        return vector<Move>();
+        return ans;
     }
 }
