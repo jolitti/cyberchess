@@ -1,14 +1,10 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <unordered_map>
 #include <vector>
 #include "../Chess.h"
-#include "../point/Point.h"
-#include "../piece/Piece.h"
-#include "../move/Move.h"
 
-using std::unordered_map, std::vector;
+using std::vector;
 
 namespace chess
 {
