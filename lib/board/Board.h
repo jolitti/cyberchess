@@ -25,7 +25,12 @@ namespace chess
         Board(const string& seed);
 
         // Get corresponding piece in the 2d vector (or null if place is empty)
-        Piece& getPieceAt(const Point& position) const;
+        Piece* getPieceAt(const Point& position) const;
+
+        
+
+        vector<Move> getWhiteMoves() const;
+        vector<Move> getBlackMoves() const;
     };
 }
 #endif
