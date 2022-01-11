@@ -10,4 +10,16 @@ namespace chess
     }
 
     piece Pawn::getPieceType() const { return pawn; }
+
+    char Pawn::toChar() const {return (pieceColor == color::white? 'p' : 'P');}
+
+    vector<Move> Pawn::getMoves() const
+    {
+        // "forward" move direction, adjusted by color
+        Point forward = pieceColor==color::white ? up : down;
+
+
+        //TODO
+        return vector<Move>();
+    }
 }

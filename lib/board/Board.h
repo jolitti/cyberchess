@@ -21,6 +21,7 @@ namespace chess
         // Default constructor (initial state of a chess board)
         Board();
 
+<<<<<<< HEAD
         //print current state of the board
         void print() const;
 
@@ -38,6 +39,13 @@ namespace chess
 
 
 
+=======
+        // Build board based on string representation
+        Board(const string& seed);
+
+        // Get corresponding piece in the 2d vector (or null if place is empty)
+        Piece& getPieceAt(const Point& position) const;
+>>>>>>> marco
     };
 }
 #endif
