@@ -1,11 +1,17 @@
 #include <iostream>
 #include "Board.h"
-#include "Piece.h"
+//non serve includere Piece.h perche Board include già Chess.h, che porta tutto in scope
+//#include "Piece.h"
 
 using namespace std;
 
 namespace chess
 {
+	// non possiamo inizializzare direttamente la classe piece perchè è virtuale pura,
+	// serve solo per dare un'interfaccia comune ai vari pezzi
+	// (che erediteranno da Piece)
+
+	// Per ora esiste solo la classe Pawn
 	Board::Board()
 	: pieces(BOARD_SIZE, vector<Piece*>(BOARD_SIZE, nullptr))
 	, moves()
@@ -41,6 +47,10 @@ namespace chess
 		pieces[0][0] = new Tower(Point(0,0), color::white, this); // ?
 	} 
 
+
+	// credo sia meglio fare una funzione toString() che restituisce una stringa
+	// invece di stampare direttamente a cout
+	// e poi fare l'overloading di operator<<
 	void Board::print() const
 	{
 		for (unsigned int i=0; i<BOARD_SIZE; i++)
@@ -59,6 +69,11 @@ namespace chess
 		moves.push_back(move);
 	}
 
+	// Le operazioni che dovremo fare sulle mosse saranno tutte iterazioni sulla lista, quindi consiglio
+	// di sostituire queste funzioni con qualcosa che restituisca const vector<vector<Piece*>>&
+	
+	//basta un riferimento immutabile perchè l'unico cambiamento che subirà la lista di mosse sarà push_back
+
 	unsigned int Board::get_history_size() const
 	{
 		return moves.size();
@@ -68,6 +83,9 @@ namespace chess
 	{
 		return move[index];
 	}
+
+
+	// per come sto immaginando io la struttura, non ci servirà cambiare la storia delle mosse
 
 	bool Board::set_move(Point start_pos, Point end_pos)
 	{
