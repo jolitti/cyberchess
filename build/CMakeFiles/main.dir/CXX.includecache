@@ -25,18 +25,10 @@ string
 -
 
 /home/rizoma/dev/cyberchess/lib/board/Board.h
-unordered_map
--
 vector
 -
 ../Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
-../point/Point.h
-/home/rizoma/dev/cyberchess/lib/point/Point.h
-../piece/Piece.h
-/home/rizoma/dev/cyberchess/lib/piece/Piece.h
-../move/Move.h
-/home/rizoma/dev/cyberchess/lib/move/Move.h
 
 /home/rizoma/dev/cyberchess/lib/move/Move.h
 ../Chess.h

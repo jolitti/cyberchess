@@ -32,6 +32,12 @@ namespace chess
         // Get corresponding piece in the 2d vector (or null if place is empty)
         Piece* getPieceAt(const Point& position) const;
 
+        // Set piece in corresponding position, return old value
+        Piece* setPieceAt(const Point& position, Piece& newValue);
+
+        // Remove piece in corresponding position, return old value
+        Piece* removePieceAt(const Point& position);
+
         // Color of the piece that has to move
         color getMovingColor() const;
         
