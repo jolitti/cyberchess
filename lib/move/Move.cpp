@@ -16,9 +16,16 @@ namespace chess
         if (hasBeenExecuted) throw std::logic_error("Move has already been executed");
         hasBeenExecuted = true;
 
-        if (b.getPieceAt(start) == nullptr) throw std::logic_error("No piece at starting location");
+        Piece* movingPiece = b.getPieceAt(start);
+        if (movingPiece == nullptr) throw std::logic_error("No piece at starting location");
         if (b.getPieceAt(destination) != nullptr) throw std::logic_error("Unexpected piece at destination");
-        // TODO
+
+        b.removePieceAt(start);
+        b.setPieceAt(destination, *movingPiece);
+        
+        // TODO: add move to board list of moves
+
+        // TODO: Set opposite color to move
     }
     
 }

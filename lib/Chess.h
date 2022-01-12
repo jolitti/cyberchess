@@ -22,6 +22,7 @@ namespace chess
         black,
         white
     };
+    color oppositeColor(color c) { return (c == color::white ? color::black : color::white); }
 
     // The specific type of piece
     enum piece
