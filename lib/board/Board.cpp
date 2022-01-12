@@ -13,34 +13,8 @@ namespace chess
 	: pieces(BOARD_SIZE, vector<Piece*>(BOARD_SIZE, nullptr))
 	, moves()
 	{
-
-		//white pieces
-		//Pawn(Point _position, color _pieceColor, Board& _boardRef);
-		pieces[0][0] = new Rook(Point(0,0), white, this); 
-		pieces[0][7] = new Rook(Point(0,7), white, this);
-		pieces[0][1] = new Knight(Point(0,1), white, this);
-		pieces[0][6] = new Knight(Point(0,6), white, this);
-		pieces[0][2] = new Bishop(Point(0,2), white, this);
-		pieces[0][5] = new Bishop(Point(0,5), white, this);
-		pieces[0][3] = new Queen(Point(0,3), white, this);
-		pieces[0][4] = new King(Point(0,4), white, this);
-		for(int i=0; i<BOARD_SIZE, i++)
-			pieces[1][i] = new Pawn(Point(1,i), white, this);
-
-
-		//black pieces
-		pieces[7][0] = new Rook(Point(7,0), black, this); 
-		pieces[7][7] = new Rook(Point(7,7), black, this);
-		pieces[7][1] = new Knight(Point(7,1), black, this);
-		pieces[7][6] = new Knight(Point(7,6), black, this);
-		pieces[7][2] = new Bishop(Point(7,2), black, this);
-		pieces[7][5] = new Bishop(Point(7,5), black, this);
-		pieces[7][3] = new Queen(Point(7,3), black, this);
-		pieces[7][4] = new King(Point(7,4), black, this);
-		for(int i=0; i<BOARD_SIZE; i++)
-			pieces[6][i] = new Pawn(Point(6,i), black, this);
-
 		toMove = white;
+		return Board(INITIAL_STATE);
 	} 
 
 	Piece* getPieceFromSeed(piece p, Point pos, color c)
@@ -68,11 +42,16 @@ namespace chess
 	{
 		for(unsigned int i=0; i<seed.size(); i++)
 		{
+			string s = seed[i];
 			piece p = LETTER_TO_PIECE_IT[s];
 			unsigned int x = i / BOARD_SIZE;
 			unsigned int y = i % BOARD_SIZE;
 			Point point(x,y);
-			pieces[x][y] = getPieceFromSeed(point, pos, toMove);
+			color c;
+			if (s.isupper())
+				c = black;
+			else c = white;
+			pieces[x][y] = getPieceFromSeed(point, pos, c);
 		}
 	}
 
