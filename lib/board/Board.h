@@ -54,7 +54,8 @@ namespace chess
         // Get a reference to the vector of past moves
         const vector<Move>& getMoveHistory() const;
 
-        // Push move onto list of past moves
+        // Push move onto list of past moves,
+        // then set color of next move to opposite of this one
         void addMove(Move m);
 
         // DO NOT IMPLEMENT YET

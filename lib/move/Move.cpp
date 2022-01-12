@@ -23,9 +23,7 @@ namespace chess
         b.removePieceAt(start);
         b.setPieceAt(destination, *movingPiece);
         
-        // TODO: add move to board list of moves
-
-        // TODO: Set opposite color to move
+        b.addMove(*this);
     }
     
 }
