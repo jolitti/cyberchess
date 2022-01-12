@@ -10,5 +10,15 @@ namespace chess
     }
 
     string Move::toString() const { return repr; }
+
+    void Move::execute(Board& b)
+    {
+        if (hasBeenExecuted) throw std::logic_error("Move has already been executed");
+        hasBeenExecuted = true;
+
+        if (b.getPieceAt(start) == nullptr) throw std::logic_error("No piece at starting location");
+        if (b.getPieceAt(destination) != nullptr) throw std::logic_error("Unexpected piece at destination");
+        // TODO
+    }
     
 }

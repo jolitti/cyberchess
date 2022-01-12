@@ -3,7 +3,7 @@
 
 #include <string>
 #include <map>
-using std::string, std::map, std::reference_wrapper;
+using std::string, std::map;
 
 #include "point/Point.h"
 
@@ -14,6 +14,7 @@ namespace chess
     class Piece;
     class Board;
     class Move;
+    class Player;
 
     // The possible colors a piece can have
     enum color

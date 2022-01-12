@@ -26,11 +26,12 @@ namespace chess
         
         // Changes the position of the referenced piece in its referenced board
         // Exepts if the move has already happened
-        virtual void execute();
+        virtual void execute(Board& b);
 
         // Creates a parallel board (via deep copy) to examine the consequences of the move
         // without actually performing it
-        virtual Board branch() const;
+        // DO NOT IMPLEMENT YET
+        virtual Board branch(Board& b) const;
 
         // String representation from source to destination (e.g "A1 B2")
         virtual string toString() const;
