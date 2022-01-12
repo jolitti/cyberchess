@@ -1,3 +1,5 @@
+// Marco Giacomin 2016269
+
 #ifndef BOARD_H
 #define BOARD_H
 
@@ -49,6 +51,11 @@ namespace chess
         // Get moves of the pieces of the color corresponding to the turn
         vector<Move> getMoves() const;
 
+        // Get a reference to the vector of past moves
+        const vector<Move>& getMoveHistory() const;
+
+        // Push move onto list of past moves
+        void addMove(Move m);
 
         // DO NOT IMPLEMENT YET
         // detect checkmate
