@@ -13,4 +13,5 @@ add_executable(main main.cpp)
 
 target_link_libraries(main PUBLIC Point)
 target_link_libraries(main PUBLIC Pawn)
+target_link_libraries(main PUBLIC Board)
 target_link_libraries(main PUBLIC Move)

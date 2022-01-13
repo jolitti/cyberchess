@@ -9,4 +9,7 @@ int main()
     Point pp {1,1};
     cout<<"Hello, world!\n";
     cout<<pp<<"\n";
+
+    auto[x,y] = pp.toPair();
+    cout << x << " " << y <<"\n";
 }
