@@ -15,7 +15,7 @@ namespace chess
 	, moves()
 	{
 		toMove = white;
-		return Board(INITIAL_STATE);
+		Board(INITIAL_STATE);
 	} 
 
 	Piece* getPieceFromSeed(piece p, Point pos, color c)

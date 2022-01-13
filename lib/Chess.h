@@ -16,14 +16,6 @@ namespace chess
     class Move;
     class Player;
 
-    // Predefinitions of piece types
-    class Pawn;
-    class Knight;
-    class Bishop;
-    class Rook;
-    class Queen;
-    class King;
-
     // The possible colors a piece can have
     enum color
     {
@@ -35,6 +27,7 @@ namespace chess
     // The specific type of piece
     enum piece
     {
+        none,
         pawn,
         bishop,
         knight,
