@@ -19,7 +19,7 @@ namespace chess
     {  
     private:
         // Color of the next piece that has to move
-        chess::color toMove; 
+        color toMove; 
 
         // Every piece on the board, mapped to their position
         vector<vector<Piece*>> pieces;

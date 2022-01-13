@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Board.h"
-#include "Piece.h" 
+#include "../piece/Piece.h"
+#include "../piece/pawn/Pawn.h"
 
 #include <vector>
 
@@ -19,6 +20,7 @@ namespace chess
 
 	Piece* getPieceFromSeed(piece p, Point pos, color c)
 	{
+		Piece* pp = nullptr;
 		switch(p)
 		{
 			case pawn:
@@ -42,16 +44,16 @@ namespace chess
 	{
 		for(unsigned int i=0; i<seed.size(); i++)
 		{
-			string s = seed[i];
-			piece p = LETTER_TO_PIECE_IT[s];
+			char s = seed.at(i);
+			piece p = LETTER_TO_PIECE_IT.at(s);
 			unsigned int x = i / BOARD_SIZE;
 			unsigned int y = i % BOARD_SIZE;
 			Point point(x,y);
 			color c;
-			if (s.isupper())
+			if (isupper(s))
 				c = black;
 			else c = white;
-			pieces[x][y] = getPieceFromSeed(point, pos, c);
+			pieces[x][y] = getPieceFromSeed(p, Point(x,y), c);
 		}
 	}
 
@@ -65,7 +67,7 @@ namespace chess
     Piece* Board::setPieceAt(const Point& position, Piece& newValue)
     {
     	auto[x, y] = position.toPair();
-    	Pieces* oldPiece = pieces[x][y];
+    	Piece* oldPiece = pieces[x][y];
 		pieces[x][y] = &newValue; //corretto assegnare per reference? 
 
 		return oldPiece;
@@ -74,7 +76,7 @@ namespace chess
     Piece* Board::removePieceAt(const Point& position) //dove verrebbe usata? Cioè non basta setPieceAt()?
     {
 		auto[x, y] = position.toPair();
-    	Pieces* oldPiece = pieces[x][y];
+    	Piece* oldPiece = pieces[x][y];
 		pieces[x][y] = nullptr;
 
 		return oldPiece;    
