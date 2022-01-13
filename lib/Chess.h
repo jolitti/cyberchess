@@ -7,11 +7,13 @@ using std::string, std::map;
 
 #include "point/Point.h"
 
+
+
 // Collection of all chess-related names
 namespace chess
 {   
     // Predefinitions to allow cyclic reference
-    class Piece;
+    //class Piece;
     class Board;
     class Move;
     class Player;
@@ -25,7 +27,7 @@ namespace chess
     color oppositeColor(color c) { return (c == color::white ? color::black : color::white); }
 
     // The specific type of piece
-    enum piece
+    enum pieceType
     {
         none,
         pawn,
@@ -36,10 +38,17 @@ namespace chess
         king
     };
 
+    // Pair of piece type and color
+    // Intellisense bug: this description is not displayed
+    typedef pair<pieceType,color> piece;
+
     // Map from initial letter (in italian) to piece
-    const map<char,piece> LETTER_TO_PIECE_IT = 
+    const map<char,pieceType> LETTER_TO_PIECE_IT = 
     {
-        // Uppercase
+        // Empty space
+        {' ',none},
+
+        // Uppercase (black)
         {'P',pawn},
         {'A',bishop},
         {'C',knight},
@@ -47,7 +56,7 @@ namespace chess
         {'D',queen},
         {'R',king},
 
-        // Lowercase
+        // Lowercase (white)
         {'p',pawn},
         {'a',bishop},
         {'c',knight},
@@ -57,9 +66,9 @@ namespace chess
     };
 }
 
-#include "piece/Piece.h"
+//#include "piece/Piece.h"
 #include "board/Board.h"
 #include "move/Move.h"
 
 
-#endif
+#endif /* CHESS_H */

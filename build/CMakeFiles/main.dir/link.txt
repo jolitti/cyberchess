@@ -1,1 +1,1 @@
-/bin/x86_64-linux-gnu-g++-11 -g CMakeFiles/main.dir/main.cpp.o -o main  lib/point/libPoint.a lib/piece/libPawn.a lib/move/libMove.a 
+/bin/x86_64-linux-gnu-g++-11 -g CMakeFiles/main.dir/main.cpp.o -o main  lib/point/libPoint.a lib/move/libMove.a 

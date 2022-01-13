@@ -11,8 +11,7 @@
 						1,
 						2,
 						3,
-						4,
-						5
+						4
 					],
 					"minimumCMakeVersion" : 
 					{
@@ -22,7 +21,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						3
+						2
 					]
 				},
 				{
@@ -44,20 +43,6 @@
 					"parentIndex" : 0,
 					"projectIndex" : 0,
 					"source" : "lib/point",
-					"targetIndexes" : 
-					[
-						2
-					]
-				},
-				{
-					"build" : "lib/piece",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.10"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 0,
-					"source" : "lib/piece",
 					"targetIndexes" : 
 					[
 						1
@@ -98,33 +83,24 @@
 						1,
 						2,
 						3,
-						4,
-						5
+						4
 					],
 					"name" : "Cyberchess",
 					"targetIndexes" : 
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
 			"targets" : 
 			[
 				{
-					"directoryIndex" : 5,
+					"directoryIndex" : 4,
 					"id" : "Move::@f89ac0e38dd1a99d865d",
 					"jsonFile" : "target-Move-Debug-db5d49bb105bc8d2eb5f.json",
 					"name" : "Move",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 3,
-					"id" : "Pawn::@69dcc5b2cab78b8041fa",
-					"jsonFile" : "target-Pawn-Debug-7ae2a08773ad693688e9.json",
-					"name" : "Pawn",
 					"projectIndex" : 0
 				},
 				{
@@ -137,7 +113,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-fef71621bb01ed7f33eb.json",
+					"jsonFile" : "target-main-Debug-96cfb70109278f15ddae.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}

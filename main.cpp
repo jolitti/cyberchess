@@ -5,7 +5,7 @@ using std::cout, chess::color, chess::piece, chess::Point;
 
 int main()
 {
-    piece p = piece::pawn;
+    piece p  {chess::pieceType::pawn,color::black};
     Point pp {1,1};
     cout<<"Hello, world!\n";
     cout<<pp<<"\n";

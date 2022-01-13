@@ -14,7 +14,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../lib/CMakeLists.txt"
   "../lib/board/CMakeLists.txt"
   "../lib/move/CMakeLists.txt"
-  "../lib/piece/CMakeLists.txt"
   "../lib/point/CMakeLists.txt"
   "/usr/share/cmake-3.18/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.18/Modules/CMakeCXXInformation.cmake"
@@ -48,7 +47,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/point/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/piece/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/board/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/move/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -57,6 +55,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
   "lib/point/CMakeFiles/Point.dir/DependInfo.cmake"
-  "lib/piece/CMakeFiles/Pawn.dir/DependInfo.cmake"
   "lib/move/CMakeFiles/Move.dir/DependInfo.cmake"
   )

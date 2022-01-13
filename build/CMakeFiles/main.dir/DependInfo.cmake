@@ -15,7 +15,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/rizoma/dev/cyberchess/build/lib/point/CMakeFiles/Point.dir/DependInfo.cmake"
-  "/home/rizoma/dev/cyberchess/build/lib/piece/CMakeFiles/Pawn.dir/DependInfo.cmake"
   "/home/rizoma/dev/cyberchess/build/lib/move/CMakeFiles/Move.dir/DependInfo.cmake"
   )
 

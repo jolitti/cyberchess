@@ -9,20 +9,19 @@ namespace chess
     class Move
     {
     protected:
-        // The piece that has to be moved as a result of this operation
-        //Piece& toMove;
-
         Point start;
         Point destination;
+        color movingColor;
 
         // Flag to be set to true after move execution
         bool hasBeenExecuted;
         // String representation to be computed at creation
-        string repr;
+        // note: precomputation not necessary anymore
+        // string repr;
         
     public:
         //Move(Piece& _toMove, Point _destination);
-        Move (Point _start, Point _destination);
+        Move (Point _start, Point _destination, color movingColor);
         
         // Changes the position of the referenced piece in its referenced board
         // Exepts if the move has already happened
@@ -31,11 +30,11 @@ namespace chess
         // Creates a parallel board (via deep copy) to examine the consequences of the move
         // without actually performing it
         // DO NOT IMPLEMENT YET
-        virtual Board branch(Board& b) const;
+        //virtual Board branch(Board& b) const;
 
         // String representation from source to destination (e.g "A1 B2")
         virtual string toString() const;
     };
 }
 
-#endif
+#endif /* MOVE_H */

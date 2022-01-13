@@ -156,19 +156,6 @@ Point/fast:
 .PHONY : Point/fast
 
 #=============================================================================
-# Target rules for targets named Pawn
-
-# Build rule for target.
-Pawn: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pawn
-.PHONY : Pawn
-
-# fast build rule for target.
-Pawn/fast:
-	$(MAKE) $(MAKESILENT) -f lib/piece/CMakeFiles/Pawn.dir/build.make lib/piece/CMakeFiles/Pawn.dir/build
-.PHONY : Pawn/fast
-
-#=============================================================================
 # Target rules for targets named Move
 
 # Build rule for target.
@@ -217,7 +204,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Move"
-	@echo "... Pawn"
 	@echo "... Point"
 	@echo "... main"
 	@echo "... main.o"
