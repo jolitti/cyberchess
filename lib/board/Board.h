@@ -1,10 +1,14 @@
-// Marco Giacomin 2016269
+// Marco Giacomin 2016269 
 
 #ifndef BOARD_H
 #define BOARD_H
 
 #include <vector>
 #include "../Chess.h"
+
+#include <iostream>
+#include <string>
+using std::ostream, std::string;
 
 using std::vector;
 
@@ -15,15 +19,19 @@ namespace chess
     {  
     private:
         // Color of the next piece that has to move
-        chess::color toMove;
+        color toMove; 
 
         // Every piece on the board, mapped to their position
         vector<vector<Piece*>> pieces;
+
         // History of the moves taken on the board
         vector<Move> moves;
 
         // Get moves of this specific color
         vector<Move> getMoves(color movingColor) const;
+
+        //obtains Piece object based on the string from enum piece 
+        Piece* getPieceFromSeed(piece p, Point pos, color c);
     public:
         // Default constructor (initial state of a chess board)
         Board();
@@ -57,6 +65,12 @@ namespace chess
         // Push move onto list of past moves,
         // then set color of next move to opposite of this one
         void addMove(Move m);
+
+        //String rappresentation of the board
+        string toString() const;
+
+        friend ostream& operator<< (ostream& o, const Board& b);
+
 
         // DO NOT IMPLEMENT YET
         // detect checkmate

@@ -16,6 +16,14 @@ namespace chess
     class Move;
     class Player;
 
+    // Predefinitions of piece types
+    class Pawn;
+    class Knight;
+    class Bishop;
+    class Rook;
+    class Queen;
+    class King;
+
     // The possible colors a piece can have
     enum color
     {
@@ -36,28 +44,29 @@ namespace chess
     };
 
     // Map from initial letter (in italian) to piece
-    const map<string,piece> LETTER_TO_PIECE_IT = 
+    const map<char,piece> LETTER_TO_PIECE_IT = 
     {
         // Uppercase
-        {"P",pawn},
-        {"A",bishop},
-        {"C",knight},
-        {"T",rook},
-        {"D",queen},
-        {"R",king},
+        {'P',pawn},
+        {'A',bishop},
+        {'C',knight},
+        {'T',rook},
+        {'D',queen},
+        {'R',king},
 
         // Lowercase
-        {"p",pawn},
-        {"a",bishop},
-        {"c",knight},
-        {"t",rook},
-        {"d",queen},
-        {"r",king}
+        {'p',pawn},
+        {'a',bishop},
+        {'c',knight},
+        {'t',rook},
+        {'d',queen},
+        {'r',king}
     };
 }
 
+#include "piece/Piece.h"
 #include "board/Board.h"
 #include "move/Move.h"
-#include "piece/Piece.h"
+
 
 #endif

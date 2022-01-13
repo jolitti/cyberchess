@@ -35,6 +35,13 @@ namespace chess
         // Get a copy of the piece's position
         Point getPos() const { return position; }
     };
+
+    #include "pawn/Pawn.h"
+    #include "knight/Knight.h"
+    #include "bishop/Bishop.h"
+    #include "rook/Rook.h"
+    #include "queen/Queen.h"
+    #include "king/King.h"
 }
 
 #endif
