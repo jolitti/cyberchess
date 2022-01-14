@@ -8,11 +8,12 @@
 
 #include <iostream>
 #include <string>
+
 using std::ostream, std::string, std::vector;
 
 namespace chess
 {
-
+    // Mutable representation of chess pieces on a 8x8 grid
     class Board
     {  
     private:
@@ -21,10 +22,10 @@ namespace chess
         vector<vector<piece>> pieces;
 
         // History of the moves taken on the board
-        vector<Move> moveHistory;
+        //vector<Move> moveHistory;
 
         // Get possible moves of this specific color
-        vector<Move> getMoves(color movingColor) const;
+        //vector<unique_ptr<Move>> getMoves(color movingColor) const;
     public:
         // Default constructor (initial state of a chess board)
         Board();
@@ -42,7 +43,7 @@ namespace chess
         piece removePieceAt(const Point& position);
 
         // Color of the piece that has to move
-        color getMovingColor() const;
+        //color getMovingColor() const;
         
 
         // Apply function f to every cell on the board, row-first
@@ -50,17 +51,20 @@ namespace chess
         void forEachCell(Function f); 
 
         // Get moves of the pieces of the color corresponding to the turn
-        vector<Move> getMoves() const;
+        //vector<unique_ptr<Move>> getMoves() const;
 
         // Get an immutable reference to the vector of past moves
-        const vector<Move>& getMoveHistory() const;
+        //const vector<unique_ptr<Move>>& getMoveHistory() const;
 
         // Push move onto list of past moves,
         // then set color of next move to opposite of this one
-        void addMove(Move m);
+        //void addMove(unique_ptr<Move> m);
 
         //String rappresentation of the board
         string toString() const;
+
+        // Like toString(), but with row and column indicators
+        string toVerboseString() const;
 
         
 
@@ -72,9 +76,10 @@ namespace chess
         // get checkmate color (exepts if no checkmate)
         //color checkmateColor() const;
 
+        ~Board();
     };
 }
 
-// Print result of toString() to ostream
+// Print result of toVerboseString() to ostream
 ostream& operator<< (ostream& o, const chess::Board b);
 #endif /* BOARD_H */

@@ -34,6 +34,9 @@ namespace chess
 
         // String representation from source to destination (e.g "A1 B2")
         virtual string toString() const;
+
+        // TODO
+        //virtual ~Move();
     };
 }
 

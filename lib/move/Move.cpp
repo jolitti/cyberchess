@@ -9,6 +9,7 @@ namespace chess
 
     void Move::execute(Board& b)
     {
+
         if (hasBeenExecuted) throw std::logic_error("Move has already been executed");
         hasBeenExecuted = true;
 
@@ -20,8 +21,6 @@ namespace chess
 
         b.removePieceAt(start);
         b.setPieceAt(destination, movingPiece);
-        
-        b.addMove(*this);
     }
     
 }

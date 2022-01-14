@@ -11,12 +11,18 @@ string
 -
 map
 -
+memory
+-
 point/Point.h
 /home/rizoma/dev/cyberchess/lib/point/Point.h
 board/Board.h
 /home/rizoma/dev/cyberchess/lib/board/Board.h
 move/Move.h
 /home/rizoma/dev/cyberchess/lib/move/Move.h
+history/History.h
+/home/rizoma/dev/cyberchess/lib/history/History.h
+movecalc/Movecalc.h
+/home/rizoma/dev/cyberchess/lib/movecalc/Movecalc.h
 
 /home/rizoma/dev/cyberchess/lib/ChessConsts.h
 string
@@ -32,7 +38,15 @@ iostream
 string
 -
 
+/home/rizoma/dev/cyberchess/lib/history/History.h
+../Chess.h
+/home/rizoma/dev/cyberchess/lib/Chess.h
+
 /home/rizoma/dev/cyberchess/lib/move/Move.h
+../Chess.h
+/home/rizoma/dev/cyberchess/lib/Chess.h
+
+/home/rizoma/dev/cyberchess/lib/movecalc/Movecalc.h
 ../Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
 

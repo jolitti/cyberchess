@@ -3,7 +3,8 @@
 
 #include <string>
 #include <map>
-using std::string, std::map;
+#include <memory>
+using std::string, std::map, std::unique_ptr;
 
 #include "point/Point.h"
 
@@ -14,9 +15,9 @@ namespace chess
 {   
     // Predefinitions to allow cyclic reference
     //class Piece;
-    class Board;
-    class Move;
-    class Player;
+    //class Board;
+    //class Move;
+    //class Player;
 
     // The possible colors a piece can have
     enum color
@@ -69,6 +70,8 @@ namespace chess
 //#include "piece/Piece.h"
 #include "board/Board.h"
 #include "move/Move.h"
+#include "history/History.h"
+#include "movecalc/Movecalc.h"
 
 
 #endif /* CHESS_H */
