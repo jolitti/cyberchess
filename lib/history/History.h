@@ -16,11 +16,11 @@ namespace chess
         History();
 
         // Returns true if point p does not appear in sources or destinations in the list
-        bool hasMoved(const Point& p) const;
+        bool hasMoved(const Point& p, const Board& b) const;
 
         // Used to verify that the last move taken was the pawn at this position
         // using its first move option to double step (false if not or if it's not a pawn)
-        bool hasPawnJustDoubleStepped(const Point& p) const;
+        bool hasPawnJustDoubleStepped(const Point& p, const Board& b) const;
 
         // Executes move and pushes it onto the moves vector
         void addMove(Move* m);
