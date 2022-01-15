@@ -2,6 +2,7 @@
 #define MOVE_H
 
 #include "../Chess.h"
+#include "../board/Board.h"
 
 namespace chess
 {

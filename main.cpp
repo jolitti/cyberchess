@@ -1,6 +1,7 @@
 #include <iostream>
 #include "lib/Chess.h"
-#include "lib/point/Point.h"
+#include "lib/movecalc/Movecalc.h"
+
 using std::cout, chess::color, chess::piece, chess::Point;
 using chess::Move;
 

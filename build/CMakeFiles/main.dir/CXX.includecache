@@ -13,24 +13,16 @@ map
 -
 memory
 -
+vector
+-
 point/Point.h
 /home/rizoma/dev/cyberchess/lib/point/Point.h
-board/Board.h
-/home/rizoma/dev/cyberchess/lib/board/Board.h
-move/Move.h
-/home/rizoma/dev/cyberchess/lib/move/Move.h
-history/History.h
-/home/rizoma/dev/cyberchess/lib/history/History.h
-movecalc/Movecalc.h
-/home/rizoma/dev/cyberchess/lib/movecalc/Movecalc.h
 
 /home/rizoma/dev/cyberchess/lib/ChessConsts.h
 string
 -
 
 /home/rizoma/dev/cyberchess/lib/board/Board.h
-vector
--
 ../Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
 iostream
@@ -41,14 +33,20 @@ string
 /home/rizoma/dev/cyberchess/lib/history/History.h
 ../Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
+../move/Move.h
+/home/rizoma/dev/cyberchess/lib/move/Move.h
 
 /home/rizoma/dev/cyberchess/lib/move/Move.h
 ../Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
+../board/Board.h
+/home/rizoma/dev/cyberchess/lib/board/Board.h
 
 /home/rizoma/dev/cyberchess/lib/movecalc/Movecalc.h
 ../Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
+../history/History.h
+/home/rizoma/dev/cyberchess/lib/history/History.h
 
 /home/rizoma/dev/cyberchess/lib/point/Point.h
 ../ChessConsts.h
@@ -63,6 +61,6 @@ iostream
 -
 lib/Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
-lib/point/Point.h
-/home/rizoma/dev/cyberchess/lib/point/Point.h
+lib/movecalc/Movecalc.h
+/home/rizoma/dev/cyberchess/lib/movecalc/Movecalc.h
 

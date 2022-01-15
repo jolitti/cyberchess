@@ -4,7 +4,8 @@
 #include <string>
 #include <map>
 #include <memory>
-using std::string, std::map, std::unique_ptr;
+#include <vector>
+using std::string, std::map, std::unique_ptr, std::vector;
 
 #include "point/Point.h"
 
@@ -68,10 +69,10 @@ namespace chess
 }
 
 //#include "piece/Piece.h"
-#include "board/Board.h"
-#include "move/Move.h"
-#include "history/History.h"
-#include "movecalc/Movecalc.h"
+//#include "board/Board.h"
+//#include "move/Move.h"
+//#include "history/History.h"
+//#include "movecalc/Movecalc.h"
 
 
 #endif /* CHESS_H */

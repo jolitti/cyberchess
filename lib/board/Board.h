@@ -3,13 +3,12 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <vector>
 #include "../Chess.h"
 
 #include <iostream>
 #include <string>
 
-using std::ostream, std::string, std::vector;
+using std::ostream, std::string;
 
 namespace chess
 {

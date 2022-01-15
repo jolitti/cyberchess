@@ -4,8 +4,11 @@
 // Collections of functions to calculate all legal moves from a chessboard
 
 #include "../Chess.h"
+#include "../history/History.h"
+
 namespace chess
 {
-    vector<unique_ptr<Move>> getMoves(Board& b, History& h);
+    // Given a board state and its past moves, get all legal moves
+    vector<Move*> getLegalMoves(Board& b, History& h);
 }
 #endif /* MOVECALC_H */

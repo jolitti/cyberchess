@@ -4,9 +4,7 @@
 lib/move/CMakeFiles/Move.dir/Move.cpp.o: ../lib/Chess.h
 lib/move/CMakeFiles/Move.dir/Move.cpp.o: ../lib/ChessConsts.h
 lib/move/CMakeFiles/Move.dir/Move.cpp.o: ../lib/board/Board.h
-lib/move/CMakeFiles/Move.dir/Move.cpp.o: ../lib/history/History.h
 lib/move/CMakeFiles/Move.dir/Move.cpp.o: ../lib/move/Move.cpp
 lib/move/CMakeFiles/Move.dir/Move.cpp.o: ../lib/move/Move.h
-lib/move/CMakeFiles/Move.dir/Move.cpp.o: ../lib/movecalc/Movecalc.h
 lib/move/CMakeFiles/Move.dir/Move.cpp.o: ../lib/point/Point.h
 
