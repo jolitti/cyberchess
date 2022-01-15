@@ -156,6 +156,19 @@ Point/fast:
 .PHONY : Point/fast
 
 #=============================================================================
+# Target rules for targets named Board
+
+# Build rule for target.
+Board: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Board
+.PHONY : Board
+
+# fast build rule for target.
+Board/fast:
+	$(MAKE) $(MAKESILENT) -f lib/board/CMakeFiles/Board.dir/build.make lib/board/CMakeFiles/Board.dir/build
+.PHONY : Board/fast
+
+#=============================================================================
 # Target rules for targets named Move
 
 # Build rule for target.
@@ -203,6 +216,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Board"
 	@echo "... Move"
 	@echo "... Point"
 	@echo "... main"

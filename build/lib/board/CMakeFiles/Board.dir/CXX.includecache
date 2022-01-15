@@ -22,6 +22,12 @@ point/Point.h
 string
 -
 
+/home/rizoma/dev/cyberchess/lib/board/Board.cpp
+Board.h
+/home/rizoma/dev/cyberchess/lib/board/Board.h
+algorithm
+-
+
 /home/rizoma/dev/cyberchess/lib/board/Board.h
 ../Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
@@ -37,12 +43,4 @@ iostream
 -
 string
 -
-
-/home/rizoma/dev/cyberchess/main.cpp
-iostream
--
-lib/Chess.h
-/home/rizoma/dev/cyberchess/lib/Chess.h
-lib/board/Board.h
-/home/rizoma/dev/cyberchess/lib/board/Board.h
 

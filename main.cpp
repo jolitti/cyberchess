@@ -1,20 +1,17 @@
 #include <iostream>
 #include "lib/Chess.h"
-#include "lib/movecalc/Movecalc.h"
+//#include "lib/movecalc/Movecalc.h"
 
-using std::cout, chess::color, chess::piece, chess::Point;
-using chess::Move;
+#include "lib/board/Board.h"
+
+using std::cout, chess::color, chess::piece, chess::Point, chess::Board;
+//using chess::Move;
 
 int main()
 {
-    /* piece p  {chess::pieceType::pawn,color::black};
-    Point pp {1,1};
-    cout<<"Hello, world!\n";
-    cout<<pp<<"\n";
+    std::cout<<"Initializing board"<<"\n";
 
-    auto[x,y] = pp.toPair();
-    cout << x << " " << y <<"\n"; */
+    Board b = Board();
 
-    auto m = std::make_unique<Move>(Move{Point{1,1},Point{1,2},color::white});
-    cout<<m.get()<<"\n";
+    cout<<b.toString()<<'\n';
 }

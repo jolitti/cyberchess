@@ -11,5 +11,5 @@ add_subdirectory(lib/move)
 add_executable(main main.cpp)
 
 target_link_libraries(main PUBLIC Point)
-#target_link_libraries(main PUBLIC Board)
-target_link_libraries(main PUBLIC Move)
+target_link_libraries(main PUBLIC Board)
+#target_link_libraries(main PUBLIC Move)

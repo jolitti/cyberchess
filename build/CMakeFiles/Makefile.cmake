@@ -55,5 +55,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
   "lib/point/CMakeFiles/Point.dir/DependInfo.cmake"
+  "lib/board/CMakeFiles/Board.dir/DependInfo.cmake"
   "lib/move/CMakeFiles/Move.dir/DependInfo.cmake"
   )

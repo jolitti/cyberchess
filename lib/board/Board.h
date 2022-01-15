@@ -45,9 +45,13 @@ namespace chess
         //color getMovingColor() const;
         
 
-        // Apply function f to every cell on the board, row-first
+        // Apply function f to every piece on the board, row-first
         template <typename Function>
-        void forEachCell(Function f); 
+        void forEachPiece(Function f); 
+
+        // Apply function f to every Point on the board, row first
+        template <typename Function>
+        void forEachPosition(Function f);
 
         // Get moves of the pieces of the color corresponding to the turn
         //vector<unique_ptr<Move>> getMoves() const;
@@ -60,7 +64,7 @@ namespace chess
         //void addMove(unique_ptr<Move> m);
 
         //String rappresentation of the board
-        string toString() const;
+        string toString();
 
         // Like toString(), but with row and column indicators
         string toVerboseString() const;
@@ -75,8 +79,10 @@ namespace chess
         // get checkmate color (exepts if no checkmate)
         //color checkmateColor() const;
 
-        ~Board();
+        //~Board();
     };
+
+    char pieceToLetterIt(const piece& p);
 }
 
 // Print result of toVerboseString() to ostream

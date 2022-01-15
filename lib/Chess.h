@@ -1,3 +1,5 @@
+// Marco Giacomin 2016269
+
 #ifndef CHESS_H
 #define CHESS_H
 
@@ -26,7 +28,8 @@ namespace chess
         black,
         white
     };
-    color oppositeColor(color c) { return (c == color::white ? color::black : color::white); }
+    inline color oppositeColor(color c) { return (c == color::white ? color::black : color::white); }
+    inline color colorOf(char c) { return (isupper(c)? color::black : color::white); }
 
     // The specific type of piece
     enum pieceType
@@ -65,6 +68,20 @@ namespace chess
         {'t',rook},
         {'d',queen},
         {'r',king}
+    };
+
+    const map<pieceType,char> PIECE_TO_LETTER_IT = 
+    {
+        // None
+        {none, ' '},
+
+        // Actual pieces (lowercase)
+        {pawn, 'p'},
+        {bishop, 'a'},
+        {knight, 'c'},
+        {rook, 't'},
+        {queen, 'd'},
+        {king, 'r'}
     };
 }
 
