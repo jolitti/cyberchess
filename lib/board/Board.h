@@ -53,6 +53,16 @@ namespace chess
         template <typename Function>
         void forEachPosition(Function f);
 
+        // Apply function f to every Point on the board, row first (const version)
+        template <typename Function>
+        void forEachPositionConst(Function f) const;
+
+        // Get list of all pieces on board, plus their position
+        vector<pair<piece,Point>> getPieces() const;
+
+        // Get list of all pieces of determinate color, plus their position
+        vector<pair<piece,Point>> getPieces(color c) const;
+
         // Get moves of the pieces of the color corresponding to the turn
         //vector<unique_ptr<Move>> getMoves() const;
 

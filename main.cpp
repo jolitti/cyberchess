@@ -13,5 +13,7 @@ int main()
 
     Board b = Board();
 
-    cout<<b.toString()<<'\n';
+    //cout<<b.toString()<<'\n';
+
+    cout<<b.getPieces(color::white).size()<<'\n';
 }

@@ -22,5 +22,9 @@ namespace chess
         b.removePieceAt(start);
         b.setPieceAt(destination, movingPiece);
     }
+
+    Point Move::getStart() const { return start; }
+    Point Move::getDestination() const { return destination; }
+    color Move::getColor() const { return movingColor; }
     
 }

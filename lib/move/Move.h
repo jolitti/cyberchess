@@ -23,6 +23,13 @@ namespace chess
     public:
         //Move(Piece& _toMove, Point _destination);
         Move (Point _start, Point _destination, color movingColor);
+
+        // Return starting point of this move
+        Point getStart() const;
+        // Return ending point of this move
+        Point getDestination() const;
+        // Return color of moving piece
+        color getColor() const;
         
         // Changes the position of the referenced piece in its referenced board
         // Exepts if the move has already happened

@@ -71,6 +71,39 @@ namespace chess
         }
     }
 
+    template <typename Function>
+    void Board::forEachPositionConst(Function f) const
+    {
+        for (int j = 0; j<BOARD_SIZE; j++)
+        {
+            for (int i = 0; i<BOARD_SIZE; i++) f(Point(i,j));
+        }
+    }
+
+    vector<pair<piece,Point>> Board::getPieces() const
+    {
+        vector<pair<piece,Point>> ans {};
+        
+        forEachPositionConst([&](const Point& pt){
+            piece p = getPieceAt(pt);
+            if (p.first != none) ans.push_back(pair<piece,Point>{p,pt});
+        });
+
+        return ans;
+    }
+
+    vector<pair<piece,Point>> Board::getPieces(color c) const
+    {
+        vector<pair<piece,Point>> ans {};
+
+        forEachPositionConst([&](const Point& pt){
+            piece p = getPieceAt(pt);
+            if (p.first != none && p.second == c) ans.push_back(pair<piece,Point>{p,pt});
+        });
+
+        return ans;
+    }
+
     piece Board::getPieceAt(const Point& position) const
     {
         auto[x,y] = position.toPair();

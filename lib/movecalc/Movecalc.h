@@ -9,6 +9,6 @@
 namespace chess
 {
     // Given a board state and its past moves, get all legal moves
-    vector<Move*> getLegalMoves(Board& b, History& h);
+    vector<Move*> getLegalMoves(History& h);
 }
 #endif /* MOVECALC_H */

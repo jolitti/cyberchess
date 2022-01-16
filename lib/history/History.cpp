@@ -1,16 +1,23 @@
+#include "History.h"
+
 namespace chess
 {
-	History::History()
-	: moves()
-	{
+	History::History(Board& b)
+	: moves(), board {b} {}
 
+	Board& History::getBoardRef() { return board; }
+
+	color History::movingColor() const
+	{
+		if (moves.size() <= 0) return color::white;
+		return oppositeColor((moves.back()->getColor()));
 	}
 
 	bool History::hasMoved(const Point& p) const
 	{
 		for(auto m : moves)
 		{
-			if (m->get_start() == p) //iterando sul vettore moves, se trova registrato p come start, vuol dire che è stato mosso(?)
+			if (m->getStart() == p) //iterando sul vettore moves, se trova registrato p come start, vuol dire che è stato mosso(?)
 				return true;
 		}
 		return false;
@@ -19,11 +26,12 @@ namespace chess
 	///devo aggiungere riferimento alla Board altrimenti non riesco sapere che pedina si trova nella posizione p 
 	//bisogna anche che la classe Move abbia dei metodi che mi permettono di conoscere il start e il destination delle pedine 
 	//ovvero quello che qua ho scritto get_start() e get_destination()
-	bool History::hasPawnJustDoubleStepped(const Point& p, const Board& b) const
+	bool History::hasPawnJustDoubleStepped(const Point& p) const
 	{
 		
-		if ((b.getPieceAt(p)).first != pieceType::pawn) return false;
-		Point start;
+		if ((board.getPieceAt(p)).first != pieceType::pawn) return false;
+		// Basta controllare l'ultima mossa
+		/* Point start;
 		for(int i=moves.size(); i>=0; i--)
 		{
 			if (moves[i]->get_destination() == p)
@@ -36,12 +44,17 @@ namespace chess
 		auto xy_start = start.toPair();
 		if (xy_p.first - xy_start.first == 2)
 			return true;
-		else return false; 		
+		else return false; 	 */	
+
+		Move& lastMove = *moves.back(); 
+		int diffY = abs(lastMove.getStart().toPair().second - lastMove.getDestination().toPair().second);
+		return diffY == 2;
 	}
 
 
 	void History::addMove(Move* m)
 	{
+		m->execute(board);
 		moves.push_back(m);
 	}
 }

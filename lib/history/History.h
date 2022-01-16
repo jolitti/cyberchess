@@ -11,16 +11,23 @@ namespace chess
     {
     private:
         vector<Move*> moves;
+        Board& board;
 
     public:
-        History();
+        History(Board& b);
+
+        // Return reference to internal Board object
+        Board& getBoardRef();
+
+        // Return color of the player that has to move
+        color movingColor() const;
 
         // Returns true if point p does not appear in sources or destinations in the list
-        bool hasMoved(const Point& p, const Board& b) const;
+        bool hasMoved(const Point& p) const;
 
         // Used to verify that the last move taken was the pawn at this position
         // using its first move option to double step (false if not or if it's not a pawn)
-        bool hasPawnJustDoubleStepped(const Point& p, const Board& b) const;
+        bool hasPawnJustDoubleStepped(const Point& p) const;
 
         // Executes move and pushes it onto the moves vector
         void addMove(Move* m);
