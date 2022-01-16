@@ -3,7 +3,7 @@
 namespace chess
 {
 	History::History(Board& b)
-	: moves(), board {b} {}
+	: moves{}, board {b} {}
 
 	Board& History::getBoardRef() { return board; }
 

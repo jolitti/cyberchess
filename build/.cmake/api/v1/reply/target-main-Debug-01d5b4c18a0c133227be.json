@@ -25,7 +25,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
 				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
@@ -64,12 +82,24 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "Point::@3fb2aa857b54c198f710"
+			"backtrace" : 6,
+			"id" : "Movecalc::@306ed2d68c6501e8728f"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "Move::@306ed2d68c6501e8728f"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "Board::@66cb39b9543924d27aa6"
+			"id" : "Board::@306ed2d68c6501e8728f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "History::@306ed2d68c6501e8728f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Point::@306ed2d68c6501e8728f"
 		}
 	],
 	"id" : "main::@6890427a1f51a3e7e1df",
@@ -87,12 +117,27 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "lib/point/libPoint.a",
+				"fragment" : "lib/libPoint.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "lib/board/libBoard.a",
+				"fragment" : "lib/libBoard.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "lib/libMove.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "lib/libHistory.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "lib/libMovecalc.a",
 				"role" : "libraries"
 			}
 		],

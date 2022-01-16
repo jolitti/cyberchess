@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rizoma/dev/cyberchess/lib/ChessConsts.h
+string
+-
+
+/home/rizoma/dev/cyberchess/lib/point/Point.cpp
+Point.h
+/home/rizoma/dev/cyberchess/lib/point/Point.h
+
+/home/rizoma/dev/cyberchess/lib/point/Point.h
+../ChessConsts.h
+/home/rizoma/dev/cyberchess/lib/ChessConsts.h
+iostream
+-
+string
+-
+

@@ -12,9 +12,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.18.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.18.4/CMakeSystem.cmake"
   "../lib/CMakeLists.txt"
-  "../lib/board/CMakeLists.txt"
-  "../lib/move/CMakeLists.txt"
-  "../lib/point/CMakeLists.txt"
   "/usr/share/cmake-3.18/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.18/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -46,15 +43,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/point/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/board/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/move/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
-  "lib/point/CMakeFiles/Point.dir/DependInfo.cmake"
-  "lib/board/CMakeFiles/Board.dir/DependInfo.cmake"
-  "lib/move/CMakeFiles/Move.dir/DependInfo.cmake"
+  "lib/CMakeFiles/Movecalc.dir/DependInfo.cmake"
+  "lib/CMakeFiles/Move.dir/DependInfo.cmake"
+  "lib/CMakeFiles/Board.dir/DependInfo.cmake"
+  "lib/CMakeFiles/History.dir/DependInfo.cmake"
+  "lib/CMakeFiles/Point.dir/DependInfo.cmake"
   )

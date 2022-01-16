@@ -45,9 +45,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/rizoma/dev/cyberchess/build/lib/cmake_install.cmake")
-  include("/home/rizoma/dev/cyberchess/build/lib/point/cmake_install.cmake")
-  include("/home/rizoma/dev/cyberchess/build/lib/board/cmake_install.cmake")
-  include("/home/rizoma/dev/cyberchess/build/lib/move/cmake_install.cmake")
 
 endif()
 

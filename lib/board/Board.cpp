@@ -84,7 +84,7 @@ namespace chess
     {
         vector<pair<piece,Point>> ans {};
         
-        forEachPositionConst([&](const Point& pt){
+        forEachPositionConst([&](Point pt){
             piece p = getPieceAt(pt);
             if (p.first != none) ans.push_back(pair<piece,Point>{p,pt});
         });
@@ -96,7 +96,7 @@ namespace chess
     {
         vector<pair<piece,Point>> ans {};
 
-        forEachPositionConst([&](const Point& pt){
+        forEachPositionConst([&](Point pt){
             piece p = getPieceAt(pt);
             if (p.first != none && p.second == c) ans.push_back(pair<piece,Point>{p,pt});
         });
@@ -115,6 +115,14 @@ namespace chess
         piece oldVal = getPieceAt(position);
         auto[x,y] = position.toPair();
         pieces[y][x] = newValue;
+        return oldVal;
+    }
+
+    piece Board::removePieceAt(const Point& position)
+    {
+        piece oldVal = getPieceAt(position);
+        auto[x,y] = position.toPair();
+        pieces[y][x] = piece{none,white};
         return oldVal;
     }
 

@@ -1,0 +1,2 @@
+/bin/x86_64-linux-gnu-ar qc libMove.a CMakeFiles/Move.dir/move/Move.cpp.o
+/bin/x86_64-linux-gnu-ranlib libMove.a

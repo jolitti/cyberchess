@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lib/point/libPoint.a"
+			"path" : "lib/libPoint.a"
 		}
 	],
 	"backtrace" : 1,
@@ -15,7 +15,7 @@
 		],
 		"files" : 
 		[
-			"lib/point/CMakeLists.txt"
+			"lib/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -49,13 +49,13 @@
 			]
 		}
 	],
-	"id" : "Point::@3fb2aa857b54c198f710",
+	"id" : "Point::@306ed2d68c6501e8728f",
 	"name" : "Point",
 	"nameOnDisk" : "libPoint.a",
 	"paths" : 
 	{
-		"build" : "lib/point",
-		"source" : "lib/point"
+		"build" : "lib",
+		"source" : "lib"
 	},
 	"sourceGroups" : 
 	[
