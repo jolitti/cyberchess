@@ -1,7 +1,6 @@
 #ifndef HISTORY_H
 #define HISTORY_H
 
-#include "../Chess.h"
 #include "../move/Move.h"
 
 namespace chess
@@ -10,7 +9,7 @@ namespace chess
     class History
     {
     private:
-        vector<Move*> moves;
+        vector<unique_ptr<Move>> moves;
         Board& board;
 
     public:
@@ -30,7 +29,7 @@ namespace chess
         bool hasPawnJustDoubleStepped(const Point& p) const;
 
         // Executes move and pushes it onto the moves vector
-        void addMove(Move* m);
+        void addMove(unique_ptr<Move> m);
     };
 }
 

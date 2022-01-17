@@ -31,14 +31,10 @@ string
 -
 
 /home/rizoma/dev/cyberchess/lib/history/History.h
-../Chess.h
-/home/rizoma/dev/cyberchess/lib/Chess.h
 ../move/Move.h
 /home/rizoma/dev/cyberchess/lib/move/Move.h
 
 /home/rizoma/dev/cyberchess/lib/move/Move.h
-../Chess.h
-/home/rizoma/dev/cyberchess/lib/Chess.h
 ../board/Board.h
 /home/rizoma/dev/cyberchess/lib/board/Board.h
 
@@ -61,6 +57,10 @@ iostream
 -
 lib/Chess.h
 /home/rizoma/dev/cyberchess/lib/Chess.h
+lib/move/Move.h
+/home/rizoma/dev/cyberchess/lib/move/Move.h
+lib/history/History.h
+/home/rizoma/dev/cyberchess/lib/history/History.h
 lib/movecalc/Movecalc.h
 /home/rizoma/dev/cyberchess/lib/movecalc/Movecalc.h
 

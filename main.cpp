@@ -1,5 +1,7 @@
 #include <iostream>
 #include "lib/Chess.h"
+#include "lib/move/Move.h"
+#include "lib/history/History.h"
 #include "lib/movecalc/Movecalc.h"
 
 using std::cout, chess::color, chess::piece, chess::Point, chess::Board;
@@ -11,9 +13,14 @@ int main()
 
     Board b = Board();
     History h = History(b);
-    Move m = Move(up,down,color::white);
+    
+    auto m = std::make_unique<Move>(Move(down*8,down*7,color::white));
 
-    //cout<<b.toString()<<'\n';
+    cout << "Move created " << m.get() << "\n";
 
-    //cout<<b.getPieces(color::white).size()<<'\n';
+    h.addMove(std::make_unique<Move>(Move(down*8,down*7,color::white)));
+
+    cout << "Move complete" << "\n";
+
+    auto moves = chess::getLegalMoves(h);
 }

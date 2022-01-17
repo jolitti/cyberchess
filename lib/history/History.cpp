@@ -15,9 +15,9 @@ namespace chess
 
 	bool History::hasMoved(const Point& p) const
 	{
-		for(auto m : moves)
+		for(auto& m : moves)
 		{
-			if (m->getStart() == p) //iterando sul vettore moves, se trova registrato p come start, vuol dire che è stato mosso(?)
+			if (m->getDestination() == p) //iterando sul vettore moves, se trova registrato p come start, vuol dire che è stato mosso(?)
 				return true;
 		}
 		return false;
@@ -52,7 +52,7 @@ namespace chess
 	}
 
 
-	void History::addMove(Move* m)
+	void History::addMove(unique_ptr<Move> m)
 	{
 		m->execute(board);
 		moves.push_back(m);

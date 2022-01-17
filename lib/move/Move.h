@@ -1,7 +1,6 @@
 #ifndef MOVE_H
 #define MOVE_H
 
-#include "../Chess.h"
 #include "../board/Board.h"
 
 namespace chess
@@ -47,5 +46,7 @@ namespace chess
         //virtual ~Move();
     };
 }
+
+ostream& operator<<(ostream& o, const chess::Move& m);
 
 #endif /* MOVE_H */

@@ -3,7 +3,12 @@
 namespace chess
 {
     Move::Move(Point _start, Point _destination, color _movingColor):
-    start {_start}, destination {_destination}, movingColor {_movingColor} {}
+    start {_start}, destination {_destination}, movingColor {_movingColor}, hasBeenExecuted{false} {}
+
+    Point Move::getStart() const { return start; }
+    Point Move::getDestination() const { return destination; }
+    color Move::getColor() const { return movingColor; }
+
 
     string Move::toString() const { return start.toString() + " " + destination.toString(); }
 
@@ -22,9 +27,10 @@ namespace chess
         b.removePieceAt(start);
         b.setPieceAt(destination, movingPiece);
     }
-
-    Point Move::getStart() const { return start; }
-    Point Move::getDestination() const { return destination; }
-    color Move::getColor() const { return movingColor; }
-    
 }
+
+ostream& operator<<(ostream& o, const chess::Move& m)
+    {
+        o<<m.toString();
+        return o;
+    }
