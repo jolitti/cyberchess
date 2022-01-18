@@ -17,11 +17,11 @@ int main()
     Board b = Board(chess::CAPTURE_TEST);
     History h = History(b);
     
-    /* auto m = std::make_unique<Move>(Move(down*6,down*5,color::white));
+    /*auto m2 = std::make_unique<Move>(Move(down*6,down*5,color::white));
 
-    cout << "Move created " << m.get() << "\n";
+    cout << "Move created " << m2->getStart() << "\n";
 
-    h.addMove(std::move(m));
+    h.addMove(std::move(m2));
 
     cout << "Move complete" << "\n"; */
 

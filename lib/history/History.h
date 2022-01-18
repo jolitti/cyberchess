@@ -16,6 +16,8 @@ namespace chess
     public:
         History(Board& b);
 
+        ~History() = default;
+
         // Return reference to internal Board object
         Board& getBoardRef();
 
@@ -31,6 +33,7 @@ namespace chess
 
         // Executes move and pushes it onto the moves vector
         void addMove(unique_ptr<Move> m);
+
     };
 }
 
