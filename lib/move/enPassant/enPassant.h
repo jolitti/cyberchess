@@ -11,8 +11,8 @@ namespace chess
 
 		~EnPassant() = default;
 
-		virtual void execute_eat(Board& b) override;
+		virtual void execute(Board& b) override;
 
-	}
+	};
 
 }

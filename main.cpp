@@ -1,5 +1,6 @@
 #include <iostream>
 #include "lib/movecalc/Movecalc.h"
+#include "lib/Move/enPassant/enPassant.h"
 
 using std::cout;
 using namespace chess;
@@ -24,6 +25,8 @@ int main()
     h.addMove(std::move(m2));
 
     cout << "Move complete" << "\n"; */
+
+    auto e = std::make_unique<EnPassant>(EnPassant(down*6,down*5,color::white));
 
     auto moves = chess::getLegalMoves(h);
     cout << moves.size() << " moves available:" << '\n';
