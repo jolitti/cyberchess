@@ -7,5 +7,6 @@ lib/CMakeFiles/History.dir/history/History.cpp.o: ../lib/board/Board.h
 lib/CMakeFiles/History.dir/history/History.cpp.o: ../lib/history/History.cpp
 lib/CMakeFiles/History.dir/history/History.cpp.o: ../lib/history/History.h
 lib/CMakeFiles/History.dir/history/History.cpp.o: ../lib/move/Move.h
+lib/CMakeFiles/History.dir/history/History.cpp.o: ../lib/move/capture/Capture.h
 lib/CMakeFiles/History.dir/history/History.cpp.o: ../lib/point/Point.h
 

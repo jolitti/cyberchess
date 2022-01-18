@@ -44,4 +44,14 @@ namespace chess
     "   p    \n"
     "        \n";
 
+    const string CAPTURE_TEST =
+    "        \n"
+    "        \n"
+    "        \n"
+    "        \n"
+    "        \n"
+    "  P P   \n"
+    "   p    \n"
+    "        \n";
+
 }

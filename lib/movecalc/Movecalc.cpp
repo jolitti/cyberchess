@@ -20,14 +20,26 @@ namespace chess
                 case pawn:
                     {
                         Point stepDirection = (movingColor==black)?down:up;
-                        if (b.getPieceAt(position + stepDirection).first == none) 
+                        if ((position+stepDirection).inBoard() &&b.getPieceAt(position + stepDirection).first == none) 
                         {
                             // Standard pawn step
                             ans.push_back(std::make_unique<Move>(position,position+stepDirection,movingColor));
-                            if (b.getPieceAt(position + stepDirection*2).first == none && !h.hasMoved(position))
+                            if (b.getPieceAt(position + stepDirection*2).first == none && !h.hasMoved(position)
+                                && (position + stepDirection*2).inBoard())
                             {   
                                 // Pawn double step (as the pawn's first move)
                                 ans.push_back(std::make_unique<Move>(position,position+stepDirection*2,movingColor));
+                            }
+                        }
+                        // Capture
+                        for (Point sideDir : {left,right})
+                        {
+                            Point capPos = position + stepDirection + sideDir;
+                            if (capPos.inBoard() 
+                                && b.getPieceAt(capPos).first!=none 
+                                && b.getPieceAt(capPos).second==oppositeColor(movingColor))
+                            {
+                                ans.push_back(std::make_unique<Move>(Capture(position,capPos,movingColor)));
                             }
                         }
                     }

@@ -101,6 +101,7 @@ main: CMakeFiles/main.dir/build.make
 main: lib/libPoint.a
 main: lib/libBoard.a
 main: lib/libMove.a
+main: lib/libCapture.a
 main: lib/libHistory.a
 main: lib/libMovecalc.a
 main: CMakeFiles/main.dir/link.txt

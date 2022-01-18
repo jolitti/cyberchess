@@ -6,6 +6,7 @@ lib/CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o: ../lib/ChessConsts.h
 lib/CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o: ../lib/board/Board.h
 lib/CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o: ../lib/history/History.h
 lib/CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o: ../lib/move/Move.h
+lib/CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o: ../lib/move/capture/Capture.h
 lib/CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o: ../lib/movecalc/Movecalc.cpp
 lib/CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o: ../lib/movecalc/Movecalc.h
 lib/CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o: ../lib/point/Point.h

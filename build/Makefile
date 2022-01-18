@@ -156,6 +156,19 @@ Movecalc/fast:
 .PHONY : Movecalc/fast
 
 #=============================================================================
+# Target rules for targets named Capture
+
+# Build rule for target.
+Capture: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Capture
+.PHONY : Capture
+
+# fast build rule for target.
+Capture/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/build
+.PHONY : Capture/fast
+
+#=============================================================================
 # Target rules for targets named Move
 
 # Build rule for target.
@@ -243,6 +256,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Board"
+	@echo "... Capture"
 	@echo "... History"
 	@echo "... Move"
 	@echo "... Movecalc"

@@ -18,7 +18,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						5
+						6
 					]
 				},
 				{
@@ -36,7 +36,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					]
 				}
 			],
@@ -57,7 +58,8 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -66,42 +68,49 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "Board::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-Board-Debug-f422a59c408a28bb5f7c.json",
+					"jsonFile" : "target-Board-Debug-d00c5f9fe5dfbcd7b63a.json",
 					"name" : "Board",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
+					"id" : "Capture::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-Capture-Debug-7d71664fdc3fcf122193.json",
+					"name" : "Capture",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
 					"id" : "History::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-History-Debug-be340b059e9213a56e4b.json",
+					"jsonFile" : "target-History-Debug-8ecda9565fc1d6639617.json",
 					"name" : "History",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "Move::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-Move-Debug-b340ea90ab85dfed0f6c.json",
+					"jsonFile" : "target-Move-Debug-29e2d56e4717c6218400.json",
 					"name" : "Move",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "Movecalc::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-Movecalc-Debug-3378c633caa8e51c4af1.json",
+					"jsonFile" : "target-Movecalc-Debug-a5720b38cccc7b31ff5f.json",
 					"name" : "Movecalc",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "Point::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-Point-Debug-55dfe6985b35388f5718.json",
+					"jsonFile" : "target-Point-Debug-e56a99773ad88956cda1.json",
 					"name" : "Point",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-c86380ca01e10ca28495.json",
+					"jsonFile" : "target-main-Debug-cbcc99f53e9a8e92ec8c.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}

@@ -1,3 +1,5 @@
+// Marco Giacomin 2016269
+
 #ifndef MOVE_H
 #define MOVE_H
 
@@ -20,6 +22,9 @@ namespace chess
         // string repr;
         
     public:
+        // Undesired, but causes an error in derived classes if removed
+        Move() = default;
+
         //Move(Piece& _toMove, Point _destination);
         Move (Point _start, Point _destination, color movingColor);
 
@@ -29,6 +34,9 @@ namespace chess
         Point getDestination() const;
         // Return color of moving piece
         color getColor() const;
+
+        // Throw specific exceptions if validity is not respected
+        void validityCheck(Board& b);
         
         // Changes the position of the referenced piece in its referenced board
         // Exepts if the move has already happened
@@ -42,8 +50,7 @@ namespace chess
         // String representation from source to destination (e.g "A1 B2")
         virtual string toString() const;
 
-        // TODO
-        //virtual ~Move();
+        virtual ~Move() = default;
     };
 }
 

@@ -57,6 +57,12 @@
 				"file" : 0,
 				"line" : 16,
 				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
 			}
 		]
 	},
@@ -66,7 +72,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-fPIC -g"
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -82,8 +88,12 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 6,
+			"backtrace" : 7,
 			"id" : "Movecalc::@306ed2d68c6501e8728f"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "Capture::@306ed2d68c6501e8728f"
 		},
 		{
 			"backtrace" : 4,
@@ -94,7 +104,7 @@
 			"id" : "Board::@306ed2d68c6501e8728f"
 		},
 		{
-			"backtrace" : 5,
+			"backtrace" : 6,
 			"id" : "History::@306ed2d68c6501e8728f"
 		},
 		{
@@ -108,7 +118,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-fPIC -g",
 				"role" : "flags"
 			},
 			{
@@ -132,11 +142,16 @@
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "lib/libHistory.a",
+				"fragment" : "lib/libCapture.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
+				"fragment" : "lib/libHistory.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
 				"fragment" : "lib/libMovecalc.a",
 				"role" : "libraries"
 			}

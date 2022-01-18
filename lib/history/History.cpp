@@ -10,7 +10,7 @@ namespace chess
 	color History::movingColor() const
 	{
 		if (moves.size() <= 0) return color::white;
-		return oppositeColor((moves.back()->getColor()));
+		return oppositeColor((moves.back().get()->getColor()));
 	}
 
 	bool History::hasMoved(const Point& p) const

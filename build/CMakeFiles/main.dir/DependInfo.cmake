@@ -17,6 +17,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Point.dir/DependInfo.cmake"
   "/home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Board.dir/DependInfo.cmake"
   "/home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Move.dir/DependInfo.cmake"
+  "/home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Capture.dir/DependInfo.cmake"
   "/home/rizoma/dev/cyberchess/build/lib/CMakeFiles/History.dir/DependInfo.cmake"
   "/home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Movecalc.dir/DependInfo.cmake"
   )

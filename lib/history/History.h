@@ -2,6 +2,7 @@
 #define HISTORY_H
 
 #include "../move/Move.h"
+#include "../move/capture/Capture.h"
 
 namespace chess
 {

@@ -17,6 +17,8 @@ namespace chess
         int y;
     
     public:
+        Point() = default;
+
         Point(int _x, int _y);
 
         Point operator+ (const Point& p) const;

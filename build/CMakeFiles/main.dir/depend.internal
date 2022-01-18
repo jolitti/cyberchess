@@ -7,6 +7,7 @@ CMakeFiles/main.dir/main.cpp.o
  /home/rizoma/dev/cyberchess/lib/board/Board.h
  /home/rizoma/dev/cyberchess/lib/history/History.h
  /home/rizoma/dev/cyberchess/lib/move/Move.h
+ /home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
  /home/rizoma/dev/cyberchess/lib/movecalc/Movecalc.h
  /home/rizoma/dev/cyberchess/lib/point/Point.h
  /home/rizoma/dev/cyberchess/main.cpp

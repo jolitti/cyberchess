@@ -145,6 +145,21 @@ Movecalc/fast:
 .PHONY : Movecalc/fast
 
 # Convenience name for target.
+lib/CMakeFiles/Capture.dir/rule:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Capture.dir/rule
+.PHONY : lib/CMakeFiles/Capture.dir/rule
+
+# Convenience name for target.
+Capture: lib/CMakeFiles/Capture.dir/rule
+
+.PHONY : Capture
+
+# fast build rule for target.
+Capture/fast:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/build
+.PHONY : Capture/fast
+
+# Convenience name for target.
 lib/CMakeFiles/Move.dir/rule:
 	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Move.dir/rule
 .PHONY : lib/CMakeFiles/Move.dir/rule
@@ -285,6 +300,33 @@ move/Move.cpp.s:
 	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Move.dir/build.make lib/CMakeFiles/Move.dir/move/Move.cpp.s
 .PHONY : move/Move.cpp.s
 
+move/capture/Capture.o: move/capture/Capture.cpp.o
+
+.PHONY : move/capture/Capture.o
+
+# target to build an object file
+move/capture/Capture.cpp.o:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.o
+.PHONY : move/capture/Capture.cpp.o
+
+move/capture/Capture.i: move/capture/Capture.cpp.i
+
+.PHONY : move/capture/Capture.i
+
+# target to preprocess a source file
+move/capture/Capture.cpp.i:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.i
+.PHONY : move/capture/Capture.cpp.i
+
+move/capture/Capture.s: move/capture/Capture.cpp.s
+
+.PHONY : move/capture/Capture.s
+
+# target to generate assembly for a file
+move/capture/Capture.cpp.s:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.s
+.PHONY : move/capture/Capture.cpp.s
+
 movecalc/Movecalc.o: movecalc/Movecalc.cpp.o
 
 .PHONY : movecalc/Movecalc.o
@@ -348,6 +390,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Board"
+	@echo "... Capture"
 	@echo "... History"
 	@echo "... Move"
 	@echo "... Movecalc"
@@ -361,6 +404,9 @@ help:
 	@echo "... move/Move.o"
 	@echo "... move/Move.i"
 	@echo "... move/Move.s"
+	@echo "... move/capture/Capture.o"
+	@echo "... move/capture/Capture.i"
+	@echo "... move/capture/Capture.s"
 	@echo "... movecalc/Movecalc.o"
 	@echo "... movecalc/Movecalc.i"
 	@echo "... movecalc/Movecalc.s"
