@@ -34,7 +34,7 @@ namespace chess
         //std::cout<<"Initializing default board\n";
     }
 
-    string Board::toString()
+    string Board::toString() const
     {
         string ans = "";
         unsigned int i = 0;
@@ -54,7 +54,7 @@ namespace chess
 
 
     template <typename Function>
-    void Board::forEachPiece(Function f)
+    void Board::forEachPiece(Function f) const
     {
         for (vector<piece> row : pieces)
         {
@@ -133,4 +133,10 @@ namespace chess
         if (p.second == color::black) ans = toupper(ans);
         return ans;
     }
+}
+
+ostream& operator<< (ostream& o, const chess::Board& b)
+{
+    o << b.toString() ;
+    return o;
 }

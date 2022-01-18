@@ -47,7 +47,7 @@ namespace chess
 
         // Apply function f to every piece on the board, row-first
         template <typename Function>
-        void forEachPiece(Function f); 
+        void forEachPiece(Function f) const; 
 
         // Apply function f to every Point on the board, row first
         template <typename Function>
@@ -74,7 +74,7 @@ namespace chess
         //void addMove(unique_ptr<Move> m);
 
         //String rappresentation of the board
-        string toString();
+        string toString() const;
 
         // Like toString(), but with row and column indicators
         string toVerboseString() const;
@@ -96,5 +96,5 @@ namespace chess
 }
 
 // Print result of toVerboseString() to ostream
-ostream& operator<< (ostream& o, const chess::Board b);
+ostream& operator<< (ostream& o, const chess::Board& b);
 #endif /* BOARD_H */

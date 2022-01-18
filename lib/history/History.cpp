@@ -54,7 +54,8 @@ namespace chess
 
 	void History::addMove(unique_ptr<Move> m)
 	{
+		std::cout << "Executing move "<<m->toString()<<"\n";
 		m->execute(board);
-		moves.push_back(m);
+		moves.push_back(std::move(m));
 	}
 }
