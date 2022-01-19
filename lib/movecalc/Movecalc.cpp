@@ -42,7 +42,15 @@ namespace chess
                                 ans.push_back(std::make_unique<Move>(Capture(position,capPos,movingColor)));
                             }
 
-                            // TODO calculate En Passant
+                            // calculate En Passant
+                            if (capPos.inBoard()
+                                && b.getPieceAt(capPos).first == none
+                                && b.getPieceAt(capPos-stepDirection).first == pawn
+                                && b.getPieceAt(capPos-stepDirection).second == oppositeColor(movingColor)
+                                && h.hasPawnJustDoubleStepped(capPos-stepDirection))
+                            {
+                                ans.push_back(std::make_unique<Move>(EnPassant(position,capPos,movingColor)));
+                            }
                         }
                     }
             }

@@ -15,20 +15,12 @@ int main()
     EnPassant e = EnPassant(down,down,color::white);
     // NOTE: insert (above) the other derived Move classes as they get written
 
-    Board b = Board(chess::CAPTURE_TEST);
+    Board b = Board(chess::EN_PASSANT_TEST);
     History h = History(b);
     
-    /*auto m2 = std::make_unique<Move>(Move(down*6,down*5,color::white));
-
-    cout << "Move created " << m2->getStart() << "\n";
-
-    h.addMove(std::move(m2));
-
-    cout << "Move complete" << "\n"; */
-
-    //auto e = std::make_unique<EnPassant>(EnPassant(down*6,down*5,color::white));
-
-    auto moves = chess::getLegalMoves(h);
+    h.addMove(std::move(getLegalMoves(h).at(0)));
+    h.addMove(std::move(getLegalMoves(h).at(1)));
+    auto moves = getLegalMoves(h);
     cout << moves.size() << " moves available:" << '\n';
     for (auto &m : moves)
     {

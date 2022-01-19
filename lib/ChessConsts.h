@@ -58,8 +58,8 @@ namespace chess
     "        \n"
     "        \n"
     "        \n"
-    "        \n"
     "    P   \n"
+    "        \n"
     "        \n"
     "   p    \n"
     "        \n";
