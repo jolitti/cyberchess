@@ -1,6 +1,5 @@
 #include <iostream>
 #include "lib/movecalc/Movecalc.h"
-#include "lib/Move/enPassant/enPassant.h"
 
 using std::cout;
 using namespace chess;
@@ -13,6 +12,7 @@ int main()
     // like this to prevent an undefined reference error
     Move m = Move(down,down*2,color::black);
     Capture c = Capture(down,down*2,color::black);
+    EnPassant e = EnPassant(down,down,color::white);
     // NOTE: insert (above) the other derived Move classes as they get written
 
     Board b = Board(chess::CAPTURE_TEST);
@@ -26,7 +26,7 @@ int main()
 
     cout << "Move complete" << "\n"; */
 
-    auto e = std::make_unique<EnPassant>(EnPassant(down*6,down*5,color::white));
+    //auto e = std::make_unique<EnPassant>(EnPassant(down*6,down*5,color::white));
 
     auto moves = chess::getLegalMoves(h);
     cout << moves.size() << " moves available:" << '\n';

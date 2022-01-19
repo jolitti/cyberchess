@@ -41,6 +41,8 @@ namespace chess
                             {
                                 ans.push_back(std::make_unique<Move>(Capture(position,capPos,movingColor)));
                             }
+
+                            // TODO calculate En Passant
                         }
                     }
             }

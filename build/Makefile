@@ -156,6 +156,19 @@ Movecalc/fast:
 .PHONY : Movecalc/fast
 
 #=============================================================================
+# Target rules for targets named EnPassant
+
+# Build rule for target.
+EnPassant: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EnPassant
+.PHONY : EnPassant
+
+# fast build rule for target.
+EnPassant/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/build
+.PHONY : EnPassant/fast
+
+#=============================================================================
 # Target rules for targets named Capture
 
 # Build rule for target.
@@ -257,6 +270,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Board"
 	@echo "... Capture"
+	@echo "... EnPassant"
 	@echo "... History"
 	@echo "... Move"
 	@echo "... Movecalc"

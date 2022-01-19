@@ -145,6 +145,21 @@ Movecalc/fast:
 .PHONY : Movecalc/fast
 
 # Convenience name for target.
+lib/CMakeFiles/EnPassant.dir/rule:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/EnPassant.dir/rule
+.PHONY : lib/CMakeFiles/EnPassant.dir/rule
+
+# Convenience name for target.
+EnPassant: lib/CMakeFiles/EnPassant.dir/rule
+
+.PHONY : EnPassant
+
+# fast build rule for target.
+EnPassant/fast:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/build
+.PHONY : EnPassant/fast
+
+# Convenience name for target.
 lib/CMakeFiles/Capture.dir/rule:
 	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Capture.dir/rule
 .PHONY : lib/CMakeFiles/Capture.dir/rule
@@ -327,6 +342,33 @@ move/capture/Capture.cpp.s:
 	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.s
 .PHONY : move/capture/Capture.cpp.s
 
+move/enpassant/EnPassant.o: move/enpassant/EnPassant.cpp.o
+
+.PHONY : move/enpassant/EnPassant.o
+
+# target to build an object file
+move/enpassant/EnPassant.cpp.o:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.o
+.PHONY : move/enpassant/EnPassant.cpp.o
+
+move/enpassant/EnPassant.i: move/enpassant/EnPassant.cpp.i
+
+.PHONY : move/enpassant/EnPassant.i
+
+# target to preprocess a source file
+move/enpassant/EnPassant.cpp.i:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.i
+.PHONY : move/enpassant/EnPassant.cpp.i
+
+move/enpassant/EnPassant.s: move/enpassant/EnPassant.cpp.s
+
+.PHONY : move/enpassant/EnPassant.s
+
+# target to generate assembly for a file
+move/enpassant/EnPassant.cpp.s:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.s
+.PHONY : move/enpassant/EnPassant.cpp.s
+
 movecalc/Movecalc.o: movecalc/Movecalc.cpp.o
 
 .PHONY : movecalc/Movecalc.o
@@ -391,6 +433,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Board"
 	@echo "... Capture"
+	@echo "... EnPassant"
 	@echo "... History"
 	@echo "... Move"
 	@echo "... Movecalc"
@@ -407,6 +450,9 @@ help:
 	@echo "... move/capture/Capture.o"
 	@echo "... move/capture/Capture.i"
 	@echo "... move/capture/Capture.s"
+	@echo "... move/enpassant/EnPassant.o"
+	@echo "... move/enpassant/EnPassant.i"
+	@echo "... move/enpassant/EnPassant.s"
 	@echo "... movecalc/Movecalc.o"
 	@echo "... movecalc/Movecalc.i"
 	@echo "... movecalc/Movecalc.s"

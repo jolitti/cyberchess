@@ -30,16 +30,6 @@ iostream
 string
 -
 
-/home/rizoma/dev/cyberchess/lib/history/History.cpp
-History.h
-/home/rizoma/dev/cyberchess/lib/history/History.h
-math.h
-/home/rizoma/dev/cyberchess/lib/history/math.h
-
-/home/rizoma/dev/cyberchess/lib/history/History.h
-../move/Move.h
-/home/rizoma/dev/cyberchess/lib/move/Move.h
-
 /home/rizoma/dev/cyberchess/lib/move/Move.h
 ../board/Board.h
 /home/rizoma/dev/cyberchess/lib/board/Board.h
@@ -51,6 +41,12 @@ enpassant/EnPassant.h
 /home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
 ../Move.h
 /home/rizoma/dev/cyberchess/lib/move/Move.h
+
+/home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.cpp
+EnPassant.h
+/home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
+math.h
+/home/rizoma/dev/cyberchess/lib/move/enpassant/math.h
 
 /home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
 ../Move.h

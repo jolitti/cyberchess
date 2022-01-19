@@ -1,1 +1,1 @@
-/bin/x86_64-linux-gnu-g++-11 -fPIC -g CMakeFiles/main.dir/main.cpp.o -o main  lib/libPoint.a lib/libBoard.a lib/libMove.a lib/libCapture.a lib/libHistory.a lib/libMovecalc.a 
+/bin/x86_64-linux-gnu-g++-11 -fPIC -g CMakeFiles/main.dir/main.cpp.o -o main  lib/libPoint.a lib/libBoard.a lib/libMove.a lib/libCapture.a lib/libEnPassant.a lib/libHistory.a lib/libMovecalc.a lib/libEnPassant.a 

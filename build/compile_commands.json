@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/rizoma/dev/cyberchess/build/lib",
+  "command": "/bin/x86_64-linux-gnu-g++-11   -fPIC -g -std=gnu++17 -o CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.o -c /home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.cpp",
+  "file": "/home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.cpp"
+},
+{
+  "directory": "/home/rizoma/dev/cyberchess/build/lib",
   "command": "/bin/x86_64-linux-gnu-g++-11   -fPIC -g -std=gnu++17 -o CMakeFiles/Capture.dir/move/capture/Capture.cpp.o -c /home/rizoma/dev/cyberchess/lib/move/capture/Capture.cpp",
   "file": "/home/rizoma/dev/cyberchess/lib/move/capture/Capture.cpp"
 },

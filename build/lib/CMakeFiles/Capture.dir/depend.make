@@ -7,5 +7,6 @@ lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.o: ../lib/board/Board.h
 lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.o: ../lib/move/Move.h
 lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.o: ../lib/move/capture/Capture.cpp
 lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.o: ../lib/move/capture/Capture.h
+lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.o: ../lib/move/enpassant/EnPassant.h
 lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.o: ../lib/point/Point.h
 

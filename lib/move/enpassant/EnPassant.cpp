@@ -7,7 +7,7 @@ namespace chess
 	: Move(_start, _destination, movingColor) 
 	{}
 
-	void EnPassat::execute(Board& b)
+	void EnPassant::execute(Board& b)
 	{
 		validityCheck(b);
 

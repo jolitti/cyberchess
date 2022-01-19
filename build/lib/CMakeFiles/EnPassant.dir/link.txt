@@ -1,0 +1,2 @@
+/bin/x86_64-linux-gnu-ar qc libEnPassant.a CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.o
+/bin/x86_64-linux-gnu-ranlib libEnPassant.a

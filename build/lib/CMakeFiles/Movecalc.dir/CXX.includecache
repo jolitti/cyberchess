@@ -33,14 +33,20 @@ string
 /home/rizoma/dev/cyberchess/lib/history/History.h
 ../move/Move.h
 /home/rizoma/dev/cyberchess/lib/move/Move.h
-../move/capture/Capture.h
-/home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
 
 /home/rizoma/dev/cyberchess/lib/move/Move.h
 ../board/Board.h
 /home/rizoma/dev/cyberchess/lib/board/Board.h
+capture/Capture.h
+/home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
+enpassant/EnPassant.h
+/home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
 
 /home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
+../Move.h
+/home/rizoma/dev/cyberchess/lib/move/Move.h
+
+/home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
 ../Move.h
 /home/rizoma/dev/cyberchess/lib/move/Move.h
 

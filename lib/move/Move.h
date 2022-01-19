@@ -56,4 +56,7 @@ namespace chess
 
 ostream& operator<<(ostream& o, const chess::Move& m);
 
+#include "capture/Capture.h"
+#include "enpassant/EnPassant.h"
+
 #endif /* MOVE_H */

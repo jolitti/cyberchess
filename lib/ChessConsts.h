@@ -54,4 +54,14 @@ namespace chess
     "   p    \n"
     "        \n";
 
+    const string EN_PASSANT_TEST =
+    "        \n"
+    "        \n"
+    "        \n"
+    "        \n"
+    "    P   \n"
+    "        \n"
+    "   p    \n"
+    "        \n";
+
 }

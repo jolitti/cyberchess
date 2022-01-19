@@ -1,3 +1,8 @@
+#ifndef ENPASSANT_H
+#define ENPASSANT_H
+
+#include "../Move.h"
+
 namespace chess
 {
 	
@@ -11,8 +16,11 @@ namespace chess
 
 		~EnPassant() = default;
 
-		virtual void execute(Board& b) override;
+		void execute(Board& b) override;
 
 	};
 
 }
+
+
+#endif /* ENPASSANT_H */

@@ -11,8 +11,12 @@ add_executable(main main.cpp)
 
 target_link_libraries(main PUBLIC Point)
 target_link_libraries(main PUBLIC Board)
+
+#Add moves libraries as they get written
 target_link_libraries(main PUBLIC Move)
 target_link_libraries(main PUBLIC Capture)
+target_link_libraries(main PUBLIC EnPassant)
+
 target_link_libraries(main PUBLIC History)
 target_link_libraries(main PUBLIC Movecalc)
 target_link_libraries(main PUBLIC EnPassant)

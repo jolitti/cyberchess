@@ -3,6 +3,7 @@
 /home/rizoma/dev/cyberchess/build/CMakeFiles/main.dir
 /home/rizoma/dev/cyberchess/build/lib/CMakeFiles/rebuild_cache.dir
 /home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Movecalc.dir
+/home/rizoma/dev/cyberchess/build/lib/CMakeFiles/EnPassant.dir
 /home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Capture.dir
 /home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Move.dir
 /home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Board.dir
