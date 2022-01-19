@@ -143,30 +143,43 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named Point
+# Target rules for targets named Movecalc
 
 # Build rule for target.
-Point: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Point
-.PHONY : Point
+Movecalc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Movecalc
+.PHONY : Movecalc
 
 # fast build rule for target.
-Point/fast:
-	$(MAKE) $(MAKESILENT) -f lib/point/CMakeFiles/Point.dir/build.make lib/point/CMakeFiles/Point.dir/build
-.PHONY : Point/fast
+Movecalc/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Movecalc.dir/build.make lib/CMakeFiles/Movecalc.dir/build
+.PHONY : Movecalc/fast
 
 #=============================================================================
-# Target rules for targets named Pawn
+# Target rules for targets named EnPassant
 
 # Build rule for target.
-Pawn: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pawn
-.PHONY : Pawn
+EnPassant: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EnPassant
+.PHONY : EnPassant
 
 # fast build rule for target.
-Pawn/fast:
-	$(MAKE) $(MAKESILENT) -f lib/piece/CMakeFiles/Pawn.dir/build.make lib/piece/CMakeFiles/Pawn.dir/build
-.PHONY : Pawn/fast
+EnPassant/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/build
+.PHONY : EnPassant/fast
+
+#=============================================================================
+# Target rules for targets named Capture
+
+# Build rule for target.
+Capture: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Capture
+.PHONY : Capture
+
+# fast build rule for target.
+Capture/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/build
+.PHONY : Capture/fast
 
 #=============================================================================
 # Target rules for targets named Move
@@ -178,8 +191,47 @@ Move: cmake_check_build_system
 
 # fast build rule for target.
 Move/fast:
-	$(MAKE) $(MAKESILENT) -f lib/move/CMakeFiles/Move.dir/build.make lib/move/CMakeFiles/Move.dir/build
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Move.dir/build.make lib/CMakeFiles/Move.dir/build
 .PHONY : Move/fast
+
+#=============================================================================
+# Target rules for targets named Board
+
+# Build rule for target.
+Board: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Board
+.PHONY : Board
+
+# fast build rule for target.
+Board/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Board.dir/build.make lib/CMakeFiles/Board.dir/build
+.PHONY : Board/fast
+
+#=============================================================================
+# Target rules for targets named History
+
+# Build rule for target.
+History: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 History
+.PHONY : History
+
+# fast build rule for target.
+History/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/History.dir/build.make lib/CMakeFiles/History.dir/build
+.PHONY : History/fast
+
+#=============================================================================
+# Target rules for targets named Point
+
+# Build rule for target.
+Point: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Point
+.PHONY : Point
+
+# fast build rule for target.
+Point/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Point.dir/build.make lib/CMakeFiles/Point.dir/build
+.PHONY : Point/fast
 
 main.o: main.cpp.o
 
@@ -216,8 +268,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Board"
+	@echo "... Capture"
+	@echo "... EnPassant"
+	@echo "... History"
 	@echo "... Move"
-	@echo "... Pawn"
+	@echo "... Movecalc"
 	@echo "... Point"
 	@echo "... main"
 	@echo "... main.o"

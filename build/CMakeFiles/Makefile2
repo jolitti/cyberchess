@@ -74,29 +74,17 @@ CMAKE_BINARY_DIR = /home/rizoma/dev/cyberchess/build
 # The main recursive "all" target.
 all: CMakeFiles/main.dir/all
 all: lib/all
-all: lib/point/all
-all: lib/piece/all
-all: lib/board/all
-all: lib/move/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: lib/preinstall
-preinstall: lib/point/preinstall
-preinstall: lib/piece/preinstall
-preinstall: lib/board/preinstall
-preinstall: lib/move/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/main.dir/clean
 clean: lib/clean
-clean: lib/point/clean
-clean: lib/piece/clean
-clean: lib/board/clean
-clean: lib/move/clean
 
 .PHONY : clean
 
@@ -104,7 +92,13 @@ clean: lib/move/clean
 # Directory level rules for directory lib
 
 # Recursive "all" directory target.
-lib/all:
+lib/all: lib/CMakeFiles/Movecalc.dir/all
+lib/all: lib/CMakeFiles/EnPassant.dir/all
+lib/all: lib/CMakeFiles/Capture.dir/all
+lib/all: lib/CMakeFiles/Move.dir/all
+lib/all: lib/CMakeFiles/Board.dir/all
+lib/all: lib/CMakeFiles/History.dir/all
+lib/all: lib/CMakeFiles/Point.dir/all
 
 .PHONY : lib/all
 
@@ -114,97 +108,35 @@ lib/preinstall:
 .PHONY : lib/preinstall
 
 # Recursive "clean" directory target.
-lib/clean:
+lib/clean: lib/CMakeFiles/Movecalc.dir/clean
+lib/clean: lib/CMakeFiles/EnPassant.dir/clean
+lib/clean: lib/CMakeFiles/Capture.dir/clean
+lib/clean: lib/CMakeFiles/Move.dir/clean
+lib/clean: lib/CMakeFiles/Board.dir/clean
+lib/clean: lib/CMakeFiles/History.dir/clean
+lib/clean: lib/CMakeFiles/Point.dir/clean
 
 .PHONY : lib/clean
-
-#=============================================================================
-# Directory level rules for directory lib/board
-
-# Recursive "all" directory target.
-lib/board/all:
-
-.PHONY : lib/board/all
-
-# Recursive "preinstall" directory target.
-lib/board/preinstall:
-
-.PHONY : lib/board/preinstall
-
-# Recursive "clean" directory target.
-lib/board/clean:
-
-.PHONY : lib/board/clean
-
-#=============================================================================
-# Directory level rules for directory lib/move
-
-# Recursive "all" directory target.
-lib/move/all: lib/move/CMakeFiles/Move.dir/all
-
-.PHONY : lib/move/all
-
-# Recursive "preinstall" directory target.
-lib/move/preinstall:
-
-.PHONY : lib/move/preinstall
-
-# Recursive "clean" directory target.
-lib/move/clean: lib/move/CMakeFiles/Move.dir/clean
-
-.PHONY : lib/move/clean
-
-#=============================================================================
-# Directory level rules for directory lib/piece
-
-# Recursive "all" directory target.
-lib/piece/all: lib/piece/CMakeFiles/Pawn.dir/all
-
-.PHONY : lib/piece/all
-
-# Recursive "preinstall" directory target.
-lib/piece/preinstall:
-
-.PHONY : lib/piece/preinstall
-
-# Recursive "clean" directory target.
-lib/piece/clean: lib/piece/CMakeFiles/Pawn.dir/clean
-
-.PHONY : lib/piece/clean
-
-#=============================================================================
-# Directory level rules for directory lib/point
-
-# Recursive "all" directory target.
-lib/point/all: lib/point/CMakeFiles/Point.dir/all
-
-.PHONY : lib/point/all
-
-# Recursive "preinstall" directory target.
-lib/point/preinstall:
-
-.PHONY : lib/point/preinstall
-
-# Recursive "clean" directory target.
-lib/point/clean: lib/point/CMakeFiles/Point.dir/clean
-
-.PHONY : lib/point/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: lib/point/CMakeFiles/Point.dir/all
-CMakeFiles/main.dir/all: lib/piece/CMakeFiles/Pawn.dir/all
-CMakeFiles/main.dir/all: lib/move/CMakeFiles/Move.dir/all
+CMakeFiles/main.dir/all: lib/CMakeFiles/Movecalc.dir/all
+CMakeFiles/main.dir/all: lib/CMakeFiles/EnPassant.dir/all
+CMakeFiles/main.dir/all: lib/CMakeFiles/Capture.dir/all
+CMakeFiles/main.dir/all: lib/CMakeFiles/Move.dir/all
+CMakeFiles/main.dir/all: lib/CMakeFiles/Board.dir/all
+CMakeFiles/main.dir/all: lib/CMakeFiles/History.dir/all
+CMakeFiles/main.dir/all: lib/CMakeFiles/Point.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=7,8 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=15,16 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -220,85 +152,193 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
-# Target rules for target lib/point/CMakeFiles/Point.dir
+# Target rules for target lib/CMakeFiles/Movecalc.dir
 
 # All Build rule for target.
-lib/point/CMakeFiles/Point.dir/all:
-	$(MAKE) $(MAKESILENT) -f lib/point/CMakeFiles/Point.dir/build.make lib/point/CMakeFiles/Point.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/point/CMakeFiles/Point.dir/build.make lib/point/CMakeFiles/Point.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=5,6 "Built target Point"
-.PHONY : lib/point/CMakeFiles/Point.dir/all
+lib/CMakeFiles/Movecalc.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Movecalc.dir/build.make lib/CMakeFiles/Movecalc.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Movecalc.dir/build.make lib/CMakeFiles/Movecalc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=11,12 "Built target Movecalc"
+.PHONY : lib/CMakeFiles/Movecalc.dir/all
 
 # Build rule for subdir invocation for target.
-lib/point/CMakeFiles/Point.dir/rule: cmake_check_build_system
+lib/CMakeFiles/Movecalc.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/point/CMakeFiles/Point.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Movecalc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 0
-.PHONY : lib/point/CMakeFiles/Point.dir/rule
+.PHONY : lib/CMakeFiles/Movecalc.dir/rule
 
 # Convenience name for target.
-Point: lib/point/CMakeFiles/Point.dir/rule
+Movecalc: lib/CMakeFiles/Movecalc.dir/rule
 
-.PHONY : Point
+.PHONY : Movecalc
 
 # clean rule for target.
-lib/point/CMakeFiles/Point.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/point/CMakeFiles/Point.dir/build.make lib/point/CMakeFiles/Point.dir/clean
-.PHONY : lib/point/CMakeFiles/Point.dir/clean
+lib/CMakeFiles/Movecalc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Movecalc.dir/build.make lib/CMakeFiles/Movecalc.dir/clean
+.PHONY : lib/CMakeFiles/Movecalc.dir/clean
 
 #=============================================================================
-# Target rules for target lib/piece/CMakeFiles/Pawn.dir
+# Target rules for target lib/CMakeFiles/EnPassant.dir
 
 # All Build rule for target.
-lib/piece/CMakeFiles/Pawn.dir/all:
-	$(MAKE) $(MAKESILENT) -f lib/piece/CMakeFiles/Pawn.dir/build.make lib/piece/CMakeFiles/Pawn.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/piece/CMakeFiles/Pawn.dir/build.make lib/piece/CMakeFiles/Pawn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=3,4 "Built target Pawn"
-.PHONY : lib/piece/CMakeFiles/Pawn.dir/all
+lib/CMakeFiles/EnPassant.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=5,6 "Built target EnPassant"
+.PHONY : lib/CMakeFiles/EnPassant.dir/all
 
 # Build rule for subdir invocation for target.
-lib/piece/CMakeFiles/Pawn.dir/rule: cmake_check_build_system
+lib/CMakeFiles/EnPassant.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/piece/CMakeFiles/Pawn.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/EnPassant.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 0
-.PHONY : lib/piece/CMakeFiles/Pawn.dir/rule
+.PHONY : lib/CMakeFiles/EnPassant.dir/rule
 
 # Convenience name for target.
-Pawn: lib/piece/CMakeFiles/Pawn.dir/rule
+EnPassant: lib/CMakeFiles/EnPassant.dir/rule
 
-.PHONY : Pawn
+.PHONY : EnPassant
 
 # clean rule for target.
-lib/piece/CMakeFiles/Pawn.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/piece/CMakeFiles/Pawn.dir/build.make lib/piece/CMakeFiles/Pawn.dir/clean
-.PHONY : lib/piece/CMakeFiles/Pawn.dir/clean
+lib/CMakeFiles/EnPassant.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/clean
+.PHONY : lib/CMakeFiles/EnPassant.dir/clean
 
 #=============================================================================
-# Target rules for target lib/move/CMakeFiles/Move.dir
+# Target rules for target lib/CMakeFiles/Capture.dir
 
 # All Build rule for target.
-lib/move/CMakeFiles/Move.dir/all:
-	$(MAKE) $(MAKESILENT) -f lib/move/CMakeFiles/Move.dir/build.make lib/move/CMakeFiles/Move.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/move/CMakeFiles/Move.dir/build.make lib/move/CMakeFiles/Move.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=1,2 "Built target Move"
-.PHONY : lib/move/CMakeFiles/Move.dir/all
+lib/CMakeFiles/Capture.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=3,4 "Built target Capture"
+.PHONY : lib/CMakeFiles/Capture.dir/all
 
 # Build rule for subdir invocation for target.
-lib/move/CMakeFiles/Move.dir/rule: cmake_check_build_system
+lib/CMakeFiles/Capture.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/move/CMakeFiles/Move.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Capture.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 0
-.PHONY : lib/move/CMakeFiles/Move.dir/rule
+.PHONY : lib/CMakeFiles/Capture.dir/rule
 
 # Convenience name for target.
-Move: lib/move/CMakeFiles/Move.dir/rule
+Capture: lib/CMakeFiles/Capture.dir/rule
+
+.PHONY : Capture
+
+# clean rule for target.
+lib/CMakeFiles/Capture.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Capture.dir/build.make lib/CMakeFiles/Capture.dir/clean
+.PHONY : lib/CMakeFiles/Capture.dir/clean
+
+#=============================================================================
+# Target rules for target lib/CMakeFiles/Move.dir
+
+# All Build rule for target.
+lib/CMakeFiles/Move.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Move.dir/build.make lib/CMakeFiles/Move.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Move.dir/build.make lib/CMakeFiles/Move.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=9,10 "Built target Move"
+.PHONY : lib/CMakeFiles/Move.dir/all
+
+# Build rule for subdir invocation for target.
+lib/CMakeFiles/Move.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Move.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 0
+.PHONY : lib/CMakeFiles/Move.dir/rule
+
+# Convenience name for target.
+Move: lib/CMakeFiles/Move.dir/rule
 
 .PHONY : Move
 
 # clean rule for target.
-lib/move/CMakeFiles/Move.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/move/CMakeFiles/Move.dir/build.make lib/move/CMakeFiles/Move.dir/clean
-.PHONY : lib/move/CMakeFiles/Move.dir/clean
+lib/CMakeFiles/Move.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Move.dir/build.make lib/CMakeFiles/Move.dir/clean
+.PHONY : lib/CMakeFiles/Move.dir/clean
+
+#=============================================================================
+# Target rules for target lib/CMakeFiles/Board.dir
+
+# All Build rule for target.
+lib/CMakeFiles/Board.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Board.dir/build.make lib/CMakeFiles/Board.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Board.dir/build.make lib/CMakeFiles/Board.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=1,2 "Built target Board"
+.PHONY : lib/CMakeFiles/Board.dir/all
+
+# Build rule for subdir invocation for target.
+lib/CMakeFiles/Board.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Board.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 0
+.PHONY : lib/CMakeFiles/Board.dir/rule
+
+# Convenience name for target.
+Board: lib/CMakeFiles/Board.dir/rule
+
+.PHONY : Board
+
+# clean rule for target.
+lib/CMakeFiles/Board.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Board.dir/build.make lib/CMakeFiles/Board.dir/clean
+.PHONY : lib/CMakeFiles/Board.dir/clean
+
+#=============================================================================
+# Target rules for target lib/CMakeFiles/History.dir
+
+# All Build rule for target.
+lib/CMakeFiles/History.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/History.dir/build.make lib/CMakeFiles/History.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/History.dir/build.make lib/CMakeFiles/History.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=7,8 "Built target History"
+.PHONY : lib/CMakeFiles/History.dir/all
+
+# Build rule for subdir invocation for target.
+lib/CMakeFiles/History.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/History.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 0
+.PHONY : lib/CMakeFiles/History.dir/rule
+
+# Convenience name for target.
+History: lib/CMakeFiles/History.dir/rule
+
+.PHONY : History
+
+# clean rule for target.
+lib/CMakeFiles/History.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/History.dir/build.make lib/CMakeFiles/History.dir/clean
+.PHONY : lib/CMakeFiles/History.dir/clean
+
+#=============================================================================
+# Target rules for target lib/CMakeFiles/Point.dir
+
+# All Build rule for target.
+lib/CMakeFiles/Point.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Point.dir/build.make lib/CMakeFiles/Point.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Point.dir/build.make lib/CMakeFiles/Point.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizoma/dev/cyberchess/build/CMakeFiles --progress-num=13,14 "Built target Point"
+.PHONY : lib/CMakeFiles/Point.dir/all
+
+# Build rule for subdir invocation for target.
+lib/CMakeFiles/Point.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Point.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizoma/dev/cyberchess/build/CMakeFiles 0
+.PHONY : lib/CMakeFiles/Point.dir/rule
+
+# Convenience name for target.
+Point: lib/CMakeFiles/Point.dir/rule
+
+.PHONY : Point
+
+# clean rule for target.
+lib/CMakeFiles/Point.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Point.dir/build.make lib/CMakeFiles/Point.dir/clean
+.PHONY : lib/CMakeFiles/Point.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

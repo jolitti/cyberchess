@@ -4,8 +4,11 @@
 CMakeFiles/main.dir/main.cpp.o: ../lib/Chess.h
 CMakeFiles/main.dir/main.cpp.o: ../lib/ChessConsts.h
 CMakeFiles/main.dir/main.cpp.o: ../lib/board/Board.h
+CMakeFiles/main.dir/main.cpp.o: ../lib/history/History.h
 CMakeFiles/main.dir/main.cpp.o: ../lib/move/Move.h
-CMakeFiles/main.dir/main.cpp.o: ../lib/piece/Piece.h
+CMakeFiles/main.dir/main.cpp.o: ../lib/move/capture/Capture.h
+CMakeFiles/main.dir/main.cpp.o: ../lib/move/enpassant/EnPassant.h
+CMakeFiles/main.dir/main.cpp.o: ../lib/movecalc/Movecalc.h
 CMakeFiles/main.dir/main.cpp.o: ../lib/point/Point.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp
 

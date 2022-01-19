@@ -1,0 +1,140 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "lib",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "Cyberchess",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Board::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-Board-Debug-d00c5f9fe5dfbcd7b63a.json",
+					"name" : "Board",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Capture::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-Capture-Debug-7d71664fdc3fcf122193.json",
+					"name" : "Capture",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "EnPassant::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-EnPassant-Debug-c4bd67bfe9e584d3c478.json",
+					"name" : "EnPassant",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "History::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-History-Debug-0516fd8b3fa52dae9c28.json",
+					"name" : "History",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Move::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-Move-Debug-29e2d56e4717c6218400.json",
+					"name" : "Move",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Movecalc::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-Movecalc-Debug-cf50089d318a08ee9449.json",
+					"name" : "Movecalc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Point::@306ed2d68c6501e8728f",
+					"jsonFile" : "target-Point-Debug-e56a99773ad88956cda1.json",
+					"name" : "Point",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-ebd0ed2f6e7e44e25097.json",
+					"name" : "main",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rizoma/dev/cyberchess/build",
+		"source" : "/home/rizoma/dev/cyberchess"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

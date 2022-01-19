@@ -21,7 +21,7 @@ namespace chess
     string Point::toString() const
     {
         if (!inBoard()) return INVALID_POS;
-        else return LETTERS.at(x) + std::to_string(y+1);
+        else return LETTERS.at(x) + std::to_string(BOARD_SIZE - y);
     }
     pair<int,int> Point::toPair() const { return pair<int,int> {x,y}; }
 

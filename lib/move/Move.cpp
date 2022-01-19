@@ -1,31 +1,44 @@
+// Marco Giacomin 2016269
+
 #include "Move.h"
 
 namespace chess
 {
-    Move::Move(Point _start, Point _destination):
-    start {_start}, destination {_destination} 
-    {
-        // Preprocessing of the string representation
-        repr = start.toString() + " " + destination.toString();
-    }
+    Move::Move(Point _start, Point _destination, color _movingColor):
+    start {_start}, destination {_destination}, movingColor {_movingColor}, hasBeenExecuted{false} {}
 
-    string Move::toString() const { return repr; }
+    Point Move::getStart() const { return start; }
+    Point Move::getDestination() const { return destination; }
+    color Move::getColor() const { return movingColor; }
 
-    void Move::execute(Board& b)
+
+    string Move::toString() const { return start.toString() + " " + destination.toString(); }
+
+    void Move::validityCheck(Board& b)
     {
         if (hasBeenExecuted) throw std::logic_error("Move has already been executed");
         hasBeenExecuted = true;
 
-        Piece* movingPiece = b.getPieceAt(start);
-        if (movingPiece == nullptr) throw std::logic_error("No piece at starting location");
-        if (b.getPieceAt(destination) != nullptr) throw std::logic_error("Unexpected piece at destination");
-
-        b.removePieceAt(start);
-        b.setPieceAt(destination, *movingPiece);
-        
-        // TODO: add move to board list of moves
-
-        // TODO: Set opposite color to move
+        piece movingPiece = b.getPieceAt(start);
+        auto[type,col] = movingPiece;
+        if (type == none ) throw std::logic_error("No piece at starting location");
     }
-    
+
+    void Move::execute(Board& b)
+    {
+
+        validityCheck(b);
+        auto[destType, _] = b.getPieceAt(destination);
+        if (destType != none) throw std::logic_error("Unexpected piece at destination");
+
+        piece movingPiece = b.getPieceAt(start);
+        b.removePieceAt(start);
+        b.setPieceAt(destination, movingPiece);
+    }
 }
+
+ostream& operator<<(ostream& o, const chess::Move& m)
+    {
+        o<<m.toString();
+        return o;
+    }

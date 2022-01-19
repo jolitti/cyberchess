@@ -17,6 +17,8 @@ namespace chess
         int y;
     
     public:
+        Point() = default;
+
         Point(int _x, int _y);
 
         Point operator+ (const Point& p) const;
@@ -39,8 +41,8 @@ namespace chess
 }
 
 // Standard directions
-const chess::Point up {0,1};
-const chess::Point down {0,-1};
+const chess::Point up {0,-1};
+const chess::Point down {0,1};
 const chess::Point left {-1,0};
 const chess::Point right {1,0};
 

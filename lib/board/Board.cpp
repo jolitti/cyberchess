@@ -1,158 +1,142 @@
-#include <iostream>
 #include "Board.h"
-#include "../piece/Piece.h"
-#include "../piece/pawn/Pawn.h"
-
-#include <vector>
-
-using namespace std;
+#include <algorithm>
 
 namespace chess
 {
-	
-	Board::Board()
-	: pieces(BOARD_SIZE, vector<Piece*>(BOARD_SIZE, nullptr))
-	, moves()
-	{
-		toMove = white;
-		return Board(INITIAL_STATE);
-	} 
+    Board::Board(const string& seed)
+    {   
+        //std::cout<<"Initializing board"<<"\n";
 
-	Piece* getPieceFromSeed(piece p, Point pos, color c)
-	{
-		Piece* pp = nullptr;
-		switch(p)
-		{
-			case pawn:
-				return new Pawn(pos, c, this);
-			case rook:
-				return new Rook(pos, c, this);
-			case knight:
-				return new Knight(pos, c, this);
-			case bishop:
-				return new Bishop(pos, c, this);
-			case queen:
-				return new Queen(pos, c, this);
-			case king:
-				return new King(pos, c, this);
-			default:
-				return nullptr;
-		}
-	}
-
-	Board::Board(const string& seed)
-	{
-		for(unsigned int i=0; i<seed.size(); i++)
-		{
-			char s = seed.at(i);
-			piece p = LETTER_TO_PIECE_IT.at(s);
-			unsigned int x = i / BOARD_SIZE;
-			unsigned int y = i % BOARD_SIZE;
-			Point point(x,y);
-			color c;
-			if (isupper(s))
-				c = black;
-			else c = white;
-			pieces[x][y] = getPieceFromSeed(p, Point(x,y), c);
-		}
-	}
+        // seed string without newlines
+        string compactSeed = seed;
+        compactSeed.erase(std::remove(compactSeed.begin(),compactSeed.end(),'\n'),compactSeed.end());
+        //std::cout<<compactSeed<< " "<<compactSeed.length() << '\n';
 
 
-    Piece* Board::getPieceAt(const Point& position) const
+        // 2d vector initialization
+        pieces = vector<vector<piece>>(BOARD_SIZE);
+        for (int i = 0;i<BOARD_SIZE;i++) pieces[i] = vector<piece>(8,piece {pieceType::none, color::white});
+
+        auto seedIterator = compactSeed.begin();
+
+        forEachPosition([&](const Point& p)
+        {
+            char c = *seedIterator;
+            seedIterator++;
+            //std::cout<<"Iter content: "<<LETTER_TO_PIECE_IT.at(c)<<'\n';
+
+            setPieceAt(p, piece{LETTER_TO_PIECE_IT.at(c),colorOf(c)});
+        });
+    }
+
+    Board::Board() : Board(INITIAL_STATE)
     {
-    	auto[x, y] = position.toPair();
-    	return pieces[x][y];
+        //std::cout<<"Initializing default board\n";
     }
 
-    Piece* Board::setPieceAt(const Point& position, Piece& newValue)
+    string Board::toString() const
     {
-    	auto[x, y] = position.toPair();
-    	Piece* oldPiece = pieces[x][y];
-		pieces[x][y] = &newValue; //corretto assegnare per reference? 
+        string ans = "";
+        unsigned int i = 0;
+        forEachPiece([&](const piece& p)
+        {
+            if (i>=BOARD_SIZE)
+            {
+                ans += "\n";
+                i = 0;
+            }
+            ans += pieceToLetterIt(p);
+            i++;
+        });
 
-		return oldPiece;
+        return ans;
     }
 
-    Piece* Board::removePieceAt(const Point& position) //dove verrebbe usata? Cioè non basta setPieceAt()?
+
+    template <typename Function>
+    void Board::forEachPiece(Function f) const
     {
-		auto[x, y] = position.toPair();
-    	Piece* oldPiece = pieces[x][y];
-		pieces[x][y] = nullptr;
-
-		return oldPiece;    
+        for (vector<piece> row : pieces)
+        {
+            for (piece p : row) f(p);
+        }
     }
 
-    color Board::getMovingColor() const
+    template <typename Function>
+    void Board::forEachPosition(Function f)
     {
-    	return toMove;
+        for (int j = 0; j<BOARD_SIZE; j++)
+        {
+            for (int i = 0; i<BOARD_SIZE; i++) f(Point(i,j));
+        }
     }
 
-    //ci servirebbe un metodo getPiece() dentro Move per ottenere la Piece 
-    //(per ora non vedo nessun altro modo di accedere alla piece tramite Move)
-    vector<Move> Board::getMoves() const 
+    template <typename Function>
+    void Board::forEachPositionConst(Function f) const
     {
-    	vector<Move> colorMoves;
-    	for(auto move : moves)
-    	{
-    		if((moves.getPiece()).getColor() == toMove)
-    			colorMoves.push_back(move);
-    	}
-    	return colorMoves;
+        for (int j = 0; j<BOARD_SIZE; j++)
+        {
+            for (int i = 0; i<BOARD_SIZE; i++) f(Point(i,j));
+        }
     }
 
-    const vector<Move>& Board::getMoveHistory() const
+    vector<pair<piece,Point>> Board::getPieces() const
     {
-    	return moves;
+        vector<pair<piece,Point>> ans {};
+        
+        forEachPositionConst([&](Point pt){
+            piece p = getPieceAt(pt);
+            if (p.first != none) ans.push_back(pair<piece,Point>{p,pt});
+        });
+
+        return ans;
     }
 
-
-    void Board::addMove(Move m)
+    vector<pair<piece,Point>> Board::getPieces(color c) const
     {
-    	moves.push_back(m);
-    	toMove = oppositeColor(toMove);
+        vector<pair<piece,Point>> ans {};
+
+        forEachPositionConst([&](Point pt){
+            piece p = getPieceAt(pt);
+            if (p.first != none && p.second == c) ans.push_back(pair<piece,Point>{p,pt});
+        });
+
+        return ans;
     }
 
-
-	void Board::save_move(Move move)
-	{
-		moves.push_back(move);
-	}
-
-	// Le operazioni che dovremo fare sulle mosse saranno tutte iterazioni sulla lista, quindi consiglio
-	// di sostituire queste funzioni con qualcosa che restituisca const vector<vector<Piece*>>&
-	
-	//basta un riferimento immutabile perchè l'unico cambiamento che subirà la lista di mosse sarà push_back
-
-	unsigned int Board::get_history_size() const
-	{
-		return moves.size();
-	}
-
-	Move Board::get_move(unsigned int index) const
-	{
-		return move[index];
-	}
-
-
-	string Board::toString() const
-	{
-		string s = ""; 
-		for (unsigned int i=0; i<BOARD_SIZE; i++)
-		{
-			for (unsigned int j=0; j<BOARD_SIZE; j++)
-			{
-				if (pieces[i][j] != nullptr)
-					s = s + (pieces[i][j])->toChar();
-				else s = s + " ";
-			}
-			s = s + "\n";
-		}
-	}
-
-	ostream& operator<< (ostream& o, const Board& b)
-    { 
-        o << b.toString();
-        return o;
+    piece Board::getPieceAt(const Point& position) const
+    {
+        auto[x,y] = position.toPair();
+        return pieces[y][x];
     }
 
+    piece Board::setPieceAt(const Point& position, piece newValue)
+    {
+        piece oldVal = getPieceAt(position);
+        auto[x,y] = position.toPair();
+        pieces[y][x] = newValue;
+        return oldVal;
+    }
+
+    piece Board::removePieceAt(const Point& position)
+    {
+        piece oldVal = getPieceAt(position);
+        auto[x,y] = position.toPair();
+        pieces[y][x] = piece{none,white};
+        return oldVal;
+    }
+
+    char pieceToLetterIt(const piece& p)
+    {
+        if (p.first == none) return ' ';
+        char ans = PIECE_TO_LETTER_IT.at(p.first);
+        if (p.second == color::black) ans = toupper(ans);
+        return ans;
+    }
+}
+
+ostream& operator<< (ostream& o, const chess::Board& b)
+{
+    o << b.toString() ;
+    return o;
 }

@@ -1,0 +1,2 @@
+/bin/x86_64-linux-gnu-ar qc libCapture.a CMakeFiles/Capture.dir/move/capture/Capture.cpp.o
+/bin/x86_64-linux-gnu-ranlib libCapture.a

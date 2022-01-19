@@ -129,6 +129,48 @@ depend:
 	cd /home/rizoma/dev/cyberchess/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+lib/board/CMakeFiles/Board.dir/rule:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/board/CMakeFiles/Board.dir/rule
+.PHONY : lib/board/CMakeFiles/Board.dir/rule
+
+# Convenience name for target.
+Board: lib/board/CMakeFiles/Board.dir/rule
+
+.PHONY : Board
+
+# fast build rule for target.
+Board/fast:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/board/CMakeFiles/Board.dir/build.make lib/board/CMakeFiles/Board.dir/build
+.PHONY : Board/fast
+
+Board.o: Board.cpp.o
+
+.PHONY : Board.o
+
+# target to build an object file
+Board.cpp.o:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/board/CMakeFiles/Board.dir/build.make lib/board/CMakeFiles/Board.dir/Board.cpp.o
+.PHONY : Board.cpp.o
+
+Board.i: Board.cpp.i
+
+.PHONY : Board.i
+
+# target to preprocess a source file
+Board.cpp.i:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/board/CMakeFiles/Board.dir/build.make lib/board/CMakeFiles/Board.dir/Board.cpp.i
+.PHONY : Board.cpp.i
+
+Board.s: Board.cpp.s
+
+.PHONY : Board.s
+
+# target to generate assembly for a file
+Board.cpp.s:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/board/CMakeFiles/Board.dir/build.make lib/board/CMakeFiles/Board.dir/Board.cpp.s
+.PHONY : Board.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -137,6 +179,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Board"
+	@echo "... Board.o"
+	@echo "... Board.i"
+	@echo "... Board.s"
 .PHONY : help
 
 
