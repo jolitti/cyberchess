@@ -1,3 +1,5 @@
+//Diana Plosnita 2018526
+
 #ifndef HISTORY_H
 #define HISTORY_H
 

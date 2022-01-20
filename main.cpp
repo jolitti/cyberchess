@@ -15,6 +15,8 @@ int main()
     EnPassant e = EnPassant(down,down,color::white);
     // NOTE: insert (above) the other derived Move classes as they get written
 
+    Promotion p = Promotion(down,down,color::white);
+
     Board b = Board();
     History h = History(b);
     

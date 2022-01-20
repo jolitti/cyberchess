@@ -1,3 +1,5 @@
+//Diana Plosnita 2018526
+
 #include "EnPassant.h"
 #include "math.h"
 
@@ -21,10 +23,10 @@ namespace chess
 		auto [eat_type, eat_color] = b.getPieceAt(p_eat);
 		if ((eat_color == oppositeColor(movingColor)) && (eat_type == pawn) && (x_distance == 1))
 		{
-			piece movingPiece = b.getPieceAt(start);
+			piece moving_piece = b.getPieceAt(start);
 			b.removePieceAt(start);
 			b.removePieceAt(p_eat);
-			b.setPieceAt(destination, movingPiece);
+			b.setPieceAt(destination, moving_piece);
 		}
 		else throw std::logic_error("not possible to do an en passant");
 	}

@@ -16,7 +16,8 @@ target_link_libraries(main PUBLIC Board)
 target_link_libraries(main PUBLIC Move)
 target_link_libraries(main PUBLIC Capture)
 target_link_libraries(main PUBLIC EnPassant)
+target_link_libraries(main PUBLIC Promotion)
 
 target_link_libraries(main PUBLIC History)
 target_link_libraries(main PUBLIC Movecalc)
-target_link_libraries(main PUBLIC EnPassant)
+
