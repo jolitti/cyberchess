@@ -1,3 +1,10 @@
+// Marco Giacomin 2016269
+
+
+// Basic constants for the game of chess
+#ifndef CHESSCONSTS_H
+#define CHESSCONSTS_H
+
 #include <string>
 using std::string;
 
@@ -64,4 +71,27 @@ namespace chess
     "   p    \n"
     "        \n";
 
+    const string KNIGHT_TEST =
+    "        \n"
+    "        \n"
+    "        \n"
+    "        \n"
+    "   c    \n"
+    "        \n"
+    "        \n"
+    "        \n";
+
+    const string KING_TEST =
+    "        \n"
+    "        \n"
+    "        \n"
+    "        \n"
+    "   r    \n"
+    "        \n"
+    "        \n"
+    "        \n";
+
 }
+
+
+#endif /* CHESSCONSTS_H */

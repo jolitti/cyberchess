@@ -1,7 +1,41 @@
 #include "Movecalc.h"
 
+
 namespace chess
 {
+    // Insert appropriate moves for pieces that move on straight lines
+    // (bishop, rook, queen)
+    void iterateOverLine(Point startPos, Point dir, color movingColor, vector<unique_ptr<Move>>& ans, Board& b)
+    {
+        int i = 1;
+        while (true)
+        {
+            Point newPos = startPos + dir*i;
+            if (!newPos.inBoard()) break;
+            auto [type,col] = b.getPieceAt(newPos);
+            if (type == none) ans.push_back(std::make_unique<Move>(Move(startPos,newPos,movingColor)));
+            else
+            {
+                if (col == oppositeColor(movingColor))
+                    ans.push_back(std::make_unique<Move>(Capture(startPos,newPos,movingColor)));
+                break;
+            }
+        }
+    }
+
+    // Add according move (for knight and king)
+    void singleStepMove(Point startPos, Point dir, color movingColor, vector<unique_ptr<Move>>& ans, Board& b)
+    {
+        Point newPos = startPos + dir;
+        if (newPos.inBoard())
+        {
+            auto [type,col] = b.getPieceAt(newPos);
+            if (type==none) ans.push_back(std::make_unique<Move>(Move(startPos,newPos,movingColor)));
+            else if (col == oppositeColor(movingColor))
+                ans.push_back(std::make_unique<Move>(Capture(startPos,newPos,movingColor)));
+        }
+    }
+
     vector<unique_ptr<Move>> getLegalMoves(History& h)
     {
         vector<unique_ptr<Move>> ans {};
@@ -52,7 +86,44 @@ namespace chess
                                 ans.push_back(std::make_unique<Move>(EnPassant(position,capPos,movingColor)));
                             }
                         }
+                        break;
                     }
+
+                case knight:
+                {
+                    for (Point dir : KNIGHT_MOVES) 
+                    {
+                        //std::cout<<"Testing move "<<(position+dir)<<'\n';
+                        singleStepMove(position,dir,movingColor,ans,b);
+                    }
+                    break;
+                }
+
+                case bishop:
+                {
+                    for (Point dir : DIAGONALS) iterateOverLine(position,dir,movingColor,ans,b);
+                    break;
+                }
+
+                case rook:
+                {
+                    for (Point dir : ORTHOGONALS) iterateOverLine(position,dir,movingColor,ans,b);
+                    break;
+                }
+
+                case queen:
+                {
+                    for (Point dir : ORTHOGONALS) iterateOverLine(position,dir,movingColor, ans,b);
+                    for (Point dir : DIAGONALS) iterateOverLine(position,dir,movingColor,ans,b);
+                    break;
+                }
+
+                case king:
+                {
+                    for (Point dir : ORTHOGONALS) singleStepMove(position,dir,movingColor, ans,b);
+                    for (Point dir : DIAGONALS) singleStepMove(position,dir,movingColor,ans,b);
+                    break;
+                }
             }
         }
 

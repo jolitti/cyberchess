@@ -83,6 +83,33 @@ namespace chess
         {queen, 'd'},
         {king, 'r'}
     };
+
+    const vector<Point> KNIGHT_MOVES = 
+    {
+        {1, 2},
+        {2, 1},
+        {-1, 2},
+        {-2, 1},
+        {1,-2},
+        {2,-1},
+        {-1,-2},
+        {-2,-1}
+    };
+
+    // Horizontal and vertical basic movements, for move calculations
+    const vector<Point> ORTHOGONALS =
+    {
+        up, down, left, right
+    };
+
+    // Diagonal basic movements, for move calculations
+    const vector<Point> DIAGONALS =
+    {
+        {1,1},
+        {-1,1},
+        {-1,-1},
+        {1,-1}
+    };
 }
 
 //#include "piece/Piece.h"

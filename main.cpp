@@ -15,11 +15,11 @@ int main()
     EnPassant e = EnPassant(down,down,color::white);
     // NOTE: insert (above) the other derived Move classes as they get written
 
-    Board b = Board(chess::EN_PASSANT_TEST);
+    Board b = Board();
     History h = History(b);
     
-    h.addMove(std::move(getLegalMoves(h).at(0)));
-    h.addMove(std::move(getLegalMoves(h).at(1)));
+    /* h.addMove(std::move(getLegalMoves(h).at(0)));
+    h.addMove(std::move(getLegalMoves(h).at(1))); */
     auto moves = getLegalMoves(h);
     cout << moves.size() << " moves available:" << '\n';
     for (auto &m : moves)
