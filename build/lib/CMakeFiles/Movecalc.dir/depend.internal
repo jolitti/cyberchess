@@ -9,6 +9,7 @@ lib/CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o
  /home/rizoma/dev/cyberchess/lib/move/Move.h
  /home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
  /home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
+ /home/rizoma/dev/cyberchess/lib/move/promotion/Promotion.h
  /home/rizoma/dev/cyberchess/lib/movecalc/Movecalc.cpp
  /home/rizoma/dev/cyberchess/lib/movecalc/Movecalc.h
  /home/rizoma/dev/cyberchess/lib/point/Point.h

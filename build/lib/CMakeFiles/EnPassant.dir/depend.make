@@ -8,5 +8,6 @@ lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.o: ../lib/move/Move.h
 lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.o: ../lib/move/capture/Capture.h
 lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.o: ../lib/move/enpassant/EnPassant.cpp
 lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.o: ../lib/move/enpassant/EnPassant.h
+lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.o: ../lib/move/promotion/Promotion.h
 lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.o: ../lib/point/Point.h
 

@@ -91,6 +91,16 @@ namespace chess
     "        \n"
     "        \n";
 
+    const string PROMOTION_TEST =
+    "        \n"
+    "   p    \n"
+    "        \n"
+    "        \n"
+    "        \n"
+    "        \n"
+    "        \n"
+    "        \n";
+
 }
 
 

@@ -37,6 +37,8 @@ capture/Capture.h
 /home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
 enpassant/EnPassant.h
 /home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
+promotion/Promotion.h
+/home/rizoma/dev/cyberchess/lib/move/promotion/Promotion.h
 
 /home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
 ../Move.h
@@ -49,6 +51,10 @@ math.h
 /home/rizoma/dev/cyberchess/lib/move/enpassant/math.h
 
 /home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
+../Move.h
+/home/rizoma/dev/cyberchess/lib/move/Move.h
+
+/home/rizoma/dev/cyberchess/lib/move/promotion/Promotion.h
 ../Move.h
 /home/rizoma/dev/cyberchess/lib/move/Move.h
 

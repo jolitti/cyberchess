@@ -84,6 +84,10 @@ namespace chess
         {king, 'r'}
     };
 
+    // Types of pieces a pawn may be promoted to
+    const vector<pieceType> POSSIBLE_PROMOTIONS =
+    { knight,bishop,rook,queen };
+
     const vector<Point> KNIGHT_MOVES = 
     {
         {1, 2},

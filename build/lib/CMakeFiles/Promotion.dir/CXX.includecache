@@ -30,10 +30,6 @@ iostream
 string
 -
 
-/home/rizoma/dev/cyberchess/lib/move/Move.cpp
-Move.h
-/home/rizoma/dev/cyberchess/lib/move/Move.h
-
 /home/rizoma/dev/cyberchess/lib/move/Move.h
 ../board/Board.h
 /home/rizoma/dev/cyberchess/lib/board/Board.h
@@ -51,6 +47,14 @@ promotion/Promotion.h
 /home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
 ../Move.h
 /home/rizoma/dev/cyberchess/lib/move/Move.h
+
+/home/rizoma/dev/cyberchess/lib/move/promotion/Promotion.cpp
+Promotion.h
+/home/rizoma/dev/cyberchess/lib/move/promotion/Promotion.h
+ctype.h
+-
+string
+-
 
 /home/rizoma/dev/cyberchess/lib/move/promotion/Promotion.h
 ../Move.h

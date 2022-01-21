@@ -8,7 +8,7 @@
 namespace chess
 {
 
-	Promotion::Promotion(Point _start, Point _destination, color movingColor, pieceType type = queen)
+	Promotion::Promotion(Point _start, Point _destination, color movingColor, pieceType type)
 	: Move(_start, _destination, movingColor)
 	, final_form(type)
 	{}
@@ -26,14 +26,14 @@ namespace chess
 		b.setPieceAt(destination, moving_piece);
 	}	
 
-	string toString() const
+	string Promotion::toString() const
 	{
-		char promoted = PIECE_TO_LETTER_IT[final_form];
+		char promoted = PIECE_TO_LETTER_IT.at(final_form);
 
 		if (movingColor == black)
 			promoted = toupper(promoted);
 
-		return (start.toString() + " " + destination.toString() + " " + string(1, promoted));
+		return (start.toString() + " " + destination.toString() + " " + promoted);
 	}
 
 }

@@ -10,4 +10,5 @@ lib/CMakeFiles/History.dir/history/History.cpp.o
  /home/rizoma/dev/cyberchess/lib/move/Move.h
  /home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
  /home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
+ /home/rizoma/dev/cyberchess/lib/move/promotion/Promotion.h
  /home/rizoma/dev/cyberchess/lib/point/Point.h

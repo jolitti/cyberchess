@@ -17,7 +17,7 @@ namespace chess
             else
             {
                 if (col == oppositeColor(movingColor))
-                    ans.push_back(std::make_unique<Move>(Capture(startPos,newPos,movingColor)));
+                    ans.push_back(std::make_unique<Capture>(Capture(startPos,newPos,movingColor)));
                 break;
             }
         }
@@ -32,7 +32,7 @@ namespace chess
             auto [type,col] = b.getPieceAt(newPos);
             if (type==none) ans.push_back(std::make_unique<Move>(Move(startPos,newPos,movingColor)));
             else if (col == oppositeColor(movingColor))
-                ans.push_back(std::make_unique<Move>(Capture(startPos,newPos,movingColor)));
+                ans.push_back(std::make_unique<Capture>(Capture(startPos,newPos,movingColor)));
         }
     }
 
@@ -55,14 +55,27 @@ namespace chess
                     {
                         Point stepDirection = (movingColor==black)?down:up;
                         if ((position+stepDirection).inBoard() &&b.getPieceAt(position + stepDirection).first == none) 
-                        {
+                        {   
+                            Point newPos = position + stepDirection;
+                            int newY = newPos.toPair().second;
                             // Standard pawn step
-                            ans.push_back(std::make_unique<Move>(position,position+stepDirection,movingColor));
-                            if (b.getPieceAt(position + stepDirection*2).first == none && !h.hasMoved(position)
-                                && (position + stepDirection*2).inBoard())
+                            if (newY!=0 && newY != BOARD_SIZE-1) ans.push_back(std::make_unique<Move>(position,position+stepDirection,movingColor));
+                            else
+                            {
+                                //std::cout<<"Adding promotions" << '\n';
+                                for (pieceType type : POSSIBLE_PROMOTIONS)
+                                    ans.push_back(std::make_unique<Promotion>(
+                                        Promotion(position,newPos,movingColor,type)
+                                    ));
+                                //std::cout << "Finished adding promotions \n";
+                            }
+
+                            Point doubleStep = position + stepDirection*2;
+                            if (doubleStep.inBoard()
+                                &&b.getPieceAt(doubleStep).first == none && !h.hasMoved(position))
                             {   
                                 // Pawn double step (as the pawn's first move)
-                                ans.push_back(std::make_unique<Move>(position,position+stepDirection*2,movingColor));
+                                ans.push_back(std::make_unique<Move>(position,doubleStep,movingColor));
                             }
                         }
                         // Capture
@@ -73,7 +86,7 @@ namespace chess
                                 && b.getPieceAt(capPos).first!=none 
                                 && b.getPieceAt(capPos).second==oppositeColor(movingColor))
                             {
-                                ans.push_back(std::make_unique<Move>(Capture(position,capPos,movingColor)));
+                                ans.push_back(std::make_unique<Capture>(Capture(position,capPos,movingColor)));
                             }
 
                             // calculate En Passant
@@ -83,7 +96,7 @@ namespace chess
                                 && b.getPieceAt(capPos-stepDirection).second == oppositeColor(movingColor)
                                 && h.hasPawnJustDoubleStepped(capPos-stepDirection))
                             {
-                                ans.push_back(std::make_unique<Move>(EnPassant(position,capPos,movingColor)));
+                                ans.push_back(std::make_unique<EnPassant>(EnPassant(position,capPos,movingColor)));
                             }
                         }
                         break;

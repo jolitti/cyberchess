@@ -10,7 +10,9 @@ namespace chess
     class Player
     {
     public:
-        virtual unique_ptr<Move> chooseMove(vector<unique_ptr<Move>> possibleMoves) = delete;
+        // Extract one of the possible moves between the list of provided ones
+        // (criterion depends on implementation)
+        virtual unique_ptr<Move> chooseMove(vector<unique_ptr<Move>> possibleMoves, const string& boardRepr) = delete;
     };
 }
 

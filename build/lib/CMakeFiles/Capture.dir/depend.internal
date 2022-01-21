@@ -9,4 +9,5 @@ lib/CMakeFiles/Capture.dir/move/capture/Capture.cpp.o
  /home/rizoma/dev/cyberchess/lib/move/capture/Capture.cpp
  /home/rizoma/dev/cyberchess/lib/move/capture/Capture.h
  /home/rizoma/dev/cyberchess/lib/move/enpassant/EnPassant.h
+ /home/rizoma/dev/cyberchess/lib/move/promotion/Promotion.h
  /home/rizoma/dev/cyberchess/lib/point/Point.h

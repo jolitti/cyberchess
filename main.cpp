@@ -13,19 +13,26 @@ int main()
     Move m = Move(down,down*2,color::black);
     Capture c = Capture(down,down*2,color::black);
     EnPassant e = EnPassant(down,down,color::white);
+    Promotion p = Promotion(down,down,color::white);
     // NOTE: insert (above) the other derived Move classes as they get written
 
-    Promotion p = Promotion(down,down,color::white);
-
-    Board b = Board();
-    History h = History(b);
     
+
+    Board b = Board(PROMOTION_TEST);
+    History h = History(b);
+
+    cout<<b<<'\n';
+
+    //auto capture = std::make_unique<Capture>(Capture({3,6},{4,5},white));
+    //h.addMove(std::move(capture));
+    //cout<<b<<'\n';
+
     /* h.addMove(std::move(getLegalMoves(h).at(0)));
     h.addMove(std::move(getLegalMoves(h).at(1))); */
     auto moves = getLegalMoves(h);
     cout << moves.size() << " moves available:" << '\n';
     for (auto &m : moves)
     {
-        cout << *m.get() << '\n';
+        cout << m.get()->toString() << '\n';
     }
 }

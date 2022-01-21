@@ -221,6 +221,19 @@ History/fast:
 .PHONY : History/fast
 
 #=============================================================================
+# Target rules for targets named Promotion
+
+# Build rule for target.
+Promotion: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Promotion
+.PHONY : Promotion
+
+# fast build rule for target.
+Promotion/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Promotion.dir/build.make lib/CMakeFiles/Promotion.dir/build
+.PHONY : Promotion/fast
+
+#=============================================================================
 # Target rules for targets named Point
 
 # Build rule for target.
@@ -275,6 +288,7 @@ help:
 	@echo "... Move"
 	@echo "... Movecalc"
 	@echo "... Point"
+	@echo "... Promotion"
 	@echo "... main"
 	@echo "... main.o"
 	@echo "... main.i"

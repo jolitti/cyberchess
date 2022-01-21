@@ -26,7 +26,7 @@ namespace chess
 
     void Move::execute(Board& b)
     {
-
+        //std::cout << "Executing normal move\n";
         validityCheck(b);
         auto[destType, _] = b.getPieceAt(destination);
         if (destType != none) throw std::logic_error("Unexpected piece at destination");

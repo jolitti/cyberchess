@@ -220,6 +220,21 @@ History/fast:
 .PHONY : History/fast
 
 # Convenience name for target.
+lib/CMakeFiles/Promotion.dir/rule:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Promotion.dir/rule
+.PHONY : lib/CMakeFiles/Promotion.dir/rule
+
+# Convenience name for target.
+Promotion: lib/CMakeFiles/Promotion.dir/rule
+
+.PHONY : Promotion
+
+# fast build rule for target.
+Promotion/fast:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Promotion.dir/build.make lib/CMakeFiles/Promotion.dir/build
+.PHONY : Promotion/fast
+
+# Convenience name for target.
 lib/CMakeFiles/Point.dir/rule:
 	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/Point.dir/rule
 .PHONY : lib/CMakeFiles/Point.dir/rule
@@ -369,6 +384,33 @@ move/enpassant/EnPassant.cpp.s:
 	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/EnPassant.dir/build.make lib/CMakeFiles/EnPassant.dir/move/enpassant/EnPassant.cpp.s
 .PHONY : move/enpassant/EnPassant.cpp.s
 
+move/promotion/Promotion.o: move/promotion/Promotion.cpp.o
+
+.PHONY : move/promotion/Promotion.o
+
+# target to build an object file
+move/promotion/Promotion.cpp.o:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Promotion.dir/build.make lib/CMakeFiles/Promotion.dir/move/promotion/Promotion.cpp.o
+.PHONY : move/promotion/Promotion.cpp.o
+
+move/promotion/Promotion.i: move/promotion/Promotion.cpp.i
+
+.PHONY : move/promotion/Promotion.i
+
+# target to preprocess a source file
+move/promotion/Promotion.cpp.i:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Promotion.dir/build.make lib/CMakeFiles/Promotion.dir/move/promotion/Promotion.cpp.i
+.PHONY : move/promotion/Promotion.cpp.i
+
+move/promotion/Promotion.s: move/promotion/Promotion.cpp.s
+
+.PHONY : move/promotion/Promotion.s
+
+# target to generate assembly for a file
+move/promotion/Promotion.cpp.s:
+	cd /home/rizoma/dev/cyberchess/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/Promotion.dir/build.make lib/CMakeFiles/Promotion.dir/move/promotion/Promotion.cpp.s
+.PHONY : move/promotion/Promotion.cpp.s
+
 movecalc/Movecalc.o: movecalc/Movecalc.cpp.o
 
 .PHONY : movecalc/Movecalc.o
@@ -438,6 +480,7 @@ help:
 	@echo "... Move"
 	@echo "... Movecalc"
 	@echo "... Point"
+	@echo "... Promotion"
 	@echo "... board/Board.o"
 	@echo "... board/Board.i"
 	@echo "... board/Board.s"
@@ -453,6 +496,9 @@ help:
 	@echo "... move/enpassant/EnPassant.o"
 	@echo "... move/enpassant/EnPassant.i"
 	@echo "... move/enpassant/EnPassant.s"
+	@echo "... move/promotion/Promotion.o"
+	@echo "... move/promotion/Promotion.i"
+	@echo "... move/promotion/Promotion.s"
 	@echo "... movecalc/Movecalc.o"
 	@echo "... movecalc/Movecalc.i"
 	@echo "... movecalc/Movecalc.s"

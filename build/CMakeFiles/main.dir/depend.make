@@ -8,6 +8,7 @@ CMakeFiles/main.dir/main.cpp.o: ../lib/history/History.h
 CMakeFiles/main.dir/main.cpp.o: ../lib/move/Move.h
 CMakeFiles/main.dir/main.cpp.o: ../lib/move/capture/Capture.h
 CMakeFiles/main.dir/main.cpp.o: ../lib/move/enpassant/EnPassant.h
+CMakeFiles/main.dir/main.cpp.o: ../lib/move/promotion/Promotion.h
 CMakeFiles/main.dir/main.cpp.o: ../lib/movecalc/Movecalc.h
 CMakeFiles/main.dir/main.cpp.o: ../lib/point/Point.h
 CMakeFiles/main.dir/main.cpp.o: ../main.cpp

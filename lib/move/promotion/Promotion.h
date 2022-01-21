@@ -15,9 +15,9 @@ namespace chess
 
 	public:
 
-		Promotion(Point _start, Point _destination, color movingColor);
+		Promotion(Point _start, Point _destination, color movingColor, pieceType type = queen);
 
-		~Promotion();
+		~Promotion() = default;
 
 		//move and capture if needed, promoting the moving piece to its final form
 		void execute(Board& b) override;

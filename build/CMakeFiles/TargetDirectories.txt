@@ -9,4 +9,5 @@
 /home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Board.dir
 /home/rizoma/dev/cyberchess/build/lib/CMakeFiles/edit_cache.dir
 /home/rizoma/dev/cyberchess/build/lib/CMakeFiles/History.dir
+/home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Promotion.dir
 /home/rizoma/dev/cyberchess/build/lib/CMakeFiles/Point.dir

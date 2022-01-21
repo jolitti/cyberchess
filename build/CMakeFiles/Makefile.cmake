@@ -54,5 +54,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "lib/CMakeFiles/Move.dir/DependInfo.cmake"
   "lib/CMakeFiles/Board.dir/DependInfo.cmake"
   "lib/CMakeFiles/History.dir/DependInfo.cmake"
+  "lib/CMakeFiles/Promotion.dir/DependInfo.cmake"
   "lib/CMakeFiles/Point.dir/DependInfo.cmake"
   )

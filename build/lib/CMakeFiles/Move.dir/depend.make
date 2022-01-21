@@ -8,5 +8,6 @@ lib/CMakeFiles/Move.dir/move/Move.cpp.o: ../lib/move/Move.cpp
 lib/CMakeFiles/Move.dir/move/Move.cpp.o: ../lib/move/Move.h
 lib/CMakeFiles/Move.dir/move/Move.cpp.o: ../lib/move/capture/Capture.h
 lib/CMakeFiles/Move.dir/move/Move.cpp.o: ../lib/move/enpassant/EnPassant.h
+lib/CMakeFiles/Move.dir/move/Move.cpp.o: ../lib/move/promotion/Promotion.h
 lib/CMakeFiles/Move.dir/move/Move.cpp.o: ../lib/point/Point.h
 
