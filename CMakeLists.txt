@@ -21,3 +21,4 @@ target_link_libraries(main PUBLIC Promotion)
 target_link_libraries(main PUBLIC History)
 target_link_libraries(main PUBLIC Movecalc)
 
+target_link_libraries(main PUBLIC Bot)

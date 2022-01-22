@@ -20,6 +20,8 @@ namespace chess
         // Move and capture corresponding pieces on Board b, performing en passant
 		void execute(Board& b) override;
 
+		Move* clone() const override;
+
 	};
 
 }

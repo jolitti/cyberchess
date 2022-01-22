@@ -35,6 +35,12 @@ namespace chess
         b.removePieceAt(start);
         b.setPieceAt(destination, movingPiece);
     }
+
+    Move* Move::clone() const
+    {
+        Move newMove = Move(*this);
+        return &newMove;
+    }
 }
 
 ostream& operator<<(ostream& o, const chess::Move& m)

@@ -8,3 +8,5 @@ add_library(Promotion move/promotion/Promotion.cpp)
 
 add_library(History history/History.cpp)
 add_library(Movecalc movecalc/Movecalc.cpp)
+
+add_library(Bot player/bot/Bot.cpp)

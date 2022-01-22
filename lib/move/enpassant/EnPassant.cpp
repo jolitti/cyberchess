@@ -31,5 +31,11 @@ namespace chess
 		else throw std::logic_error("not possible to do an en passant");
 	}
 
+	Move* EnPassant::clone() const
+    {
+        EnPassant newEnPassant = EnPassant(*this);
+        return &newEnPassant;
+    }
+
 	
 }

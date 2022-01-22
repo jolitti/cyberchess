@@ -1,11 +1,18 @@
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 #include "lib/movecalc/Movecalc.h"
+#include "lib/player/Player.h"
 
 using std::cout;
 using namespace chess;
 
 int main()
 {
+    srand (time(NULL));
+
     std::cout<<"Initializing board"<<"\n";
 
     // I cannot for the life of me explain why we need to bring Move and its derived classes in scope
@@ -20,19 +27,13 @@ int main()
 
     Board b = Board(PROMOTION_TEST);
     History h = History(b);
+    Bot bot = Bot();
+    Player* player1 = &bot;
 
     cout<<b<<'\n';
 
-    //auto capture = std::make_unique<Capture>(Capture({3,6},{4,5},white));
-    //h.addMove(std::move(capture));
-    //cout<<b<<'\n';
-
-    /* h.addMove(std::move(getLegalMoves(h).at(0)));
-    h.addMove(std::move(getLegalMoves(h).at(1))); */
     auto moves = getLegalMoves(h);
-    cout << moves.size() << " moves available:" << '\n';
-    for (auto &m : moves)
-    {
-        cout << m.get()->toString() << '\n';
-    }
+    h.addMove(player1->chooseMove(std::move(moves),b.toString()));
+
+    cout<<b<<'\n';
 }

@@ -15,6 +15,7 @@ namespace chess
         // Move and capture corresponding pieces on Board b
         void execute(Board& b) override;
 
+        Capture* clone() const;
         ~Capture() = default;
     };
 }

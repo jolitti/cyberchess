@@ -36,4 +36,10 @@ namespace chess
 		return (start.toString() + " " + destination.toString() + " " + promoted);
 	}
 
+	Move* Promotion::clone() const
+    {
+        Promotion newPromotion = Promotion(*this);
+        return &newPromotion;
+    }
+
 }
