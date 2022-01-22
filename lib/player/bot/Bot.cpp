@@ -7,7 +7,7 @@
 
 namespace chess
 {
-    unique_ptr<Move> Bot::chooseMove(vector<unique_ptr<Move>> possibleMoves, const string& boardRepr)
+    unique_ptr<Move> Bot::chooseMove(vector<unique_ptr<Move>> possibleMoves, const History& historyRepr)
     {
         int randIndex = rand()%possibleMoves.size();
         //return std::move(possibleMoves.at(randIndex));

@@ -44,7 +44,7 @@ int main()
 
         try
         {
-            h.addMove(movingPlayer->chooseMove(std::move(possibleMoves),b.toString()));
+            h.addMove(movingPlayer->chooseMove(std::move(possibleMoves),h));
         }
         catch (const std::exception& e)
         {

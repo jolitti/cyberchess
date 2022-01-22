@@ -3,7 +3,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "../move/Move.h"
+#include "../history/History.h"
 
 namespace chess
 {
@@ -12,7 +12,7 @@ namespace chess
     public:
         // Extract one of the possible moves between the list of provided ones
         // (criterion depends on implementation)
-        virtual unique_ptr<Move> chooseMove(vector<unique_ptr<Move>> possibleMoves, const string& boardRepr) = 0;
+        virtual unique_ptr<Move> chooseMove(vector<unique_ptr<Move>> possibleMoves, const History& historyRef) = 0;
     };
 }
 

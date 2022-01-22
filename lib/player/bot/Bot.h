@@ -10,7 +10,7 @@ namespace chess
     class Bot : public Player
     {
     public:
-        unique_ptr<Move> chooseMove(vector<unique_ptr<Move>> possibleMoves, const string& boardRepr) override;
+        unique_ptr<Move> chooseMove(vector<unique_ptr<Move>> possibleMoves, const History& historyRepr) override;
     };
 }
 
