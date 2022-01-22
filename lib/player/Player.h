@@ -17,5 +17,6 @@ namespace chess
 }
 
 #include "bot/Bot.h"
+#include "human/Human.h"
 
 #endif /* PLAYER_H */
