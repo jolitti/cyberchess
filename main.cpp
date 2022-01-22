@@ -11,6 +11,7 @@ using namespace chess;
 
 int main()
 {
+    const unsigned int MAX_ITER = 50;
     srand (time(NULL));
 
     std::cout<<"Initializing board"<<"\n";
@@ -25,15 +26,33 @@ int main()
 
     
 
-    Board b = Board(PROMOTION_TEST);
+    Board b = Board();
     History h = History(b);
-    Bot bot = Bot();
-    Player* player1 = &bot;
+    Player* player1 = new Bot(); // white player
+    Player* player2 = new Bot(); // black player
 
     cout<<b<<'\n';
 
-    auto moves = getLegalMoves(h);
-    h.addMove(player1->chooseMove(std::move(moves),b.toString()));
+    unsigned int iter = 0;
+    while (true)
+    {
+        auto possibleMoves = getLegalMoves(h);
+        if (possibleMoves.size() <= 0 || iter>MAX_ITER) break;
+
+        color movingColor = h.movingColor();
+        Player* movingPlayer = movingColor==white?player1:player2;
+
+        try
+        {
+            h.addMove(movingPlayer->chooseMove(std::move(possibleMoves),b.toString()));
+        }
+        catch (const std::exception& e)
+        {
+            cout<<"Exception caught!\n";
+            cout<<e.what()<<'\n';
+        }
+        iter++;
+    }
 
     cout<<b<<'\n';
 }

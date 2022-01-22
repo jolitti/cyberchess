@@ -23,7 +23,7 @@ namespace chess
         
     public:
         // Undesired, but causes an error in derived classes if removed
-        Move() = default;
+        Move();
 
         //Move(Piece& _toMove, Point _destination);
         Move (Point _start, Point _destination, color movingColor);
