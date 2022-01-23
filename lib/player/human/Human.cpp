@@ -71,6 +71,5 @@ namespace chess
 		}
 
 		return std::move(possibleMoves[i]);
-		return std::move(p);
 	}
 }
