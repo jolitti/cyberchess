@@ -50,7 +50,7 @@ namespace chess
 			else
 			{
 				if(!check_format(s_move))
-					cout << "invalid move format";
+					cout << "invalid move format" << "\n";
 				else
 				{
 					for(i=0; i<possibleMoves.size(); i++)
@@ -65,7 +65,7 @@ namespace chess
 						}
 					}
 					if(flag == false)
-						cout << "illegal move, try again";
+						cout << "illegal move, try again" << "\n";
 				}
 			}
 		}
