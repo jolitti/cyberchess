@@ -8,7 +8,10 @@ namespace chess
 	History::History(Board& b)
 	: moves{}, board {b} {}
 
-	Board& History::getBoardRef() { return board; }
+	Board& History::getBoardRef() const
+	{ 
+		return board; 
+	}
 
 	color History::movingColor() const
 	{
