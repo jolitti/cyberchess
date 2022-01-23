@@ -1,2 +1,0 @@
-/bin/x86_64-linux-gnu-ar qc libMovecalc.a CMakeFiles/Movecalc.dir/movecalc/Movecalc.cpp.o
-/bin/x86_64-linux-gnu-ranlib libMovecalc.a

@@ -1,2 +1,0 @@
-/bin/x86_64-linux-gnu-ar qc libPoint.a CMakeFiles/Point.dir/Point.cpp.o
-/bin/x86_64-linux-gnu-ranlib libPoint.a
