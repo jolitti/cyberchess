@@ -1,3 +1,5 @@
+#Marco Giacomin 2016269
+
 add_library(Point point/Point.cpp)
 add_library(Board board/Board.cpp)
 

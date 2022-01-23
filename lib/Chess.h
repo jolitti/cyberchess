@@ -103,7 +103,7 @@ namespace chess
     // Horizontal and vertical basic movements, for move calculations
     const vector<Point> ORTHOGONALS =
     {
-        up, down, left, right
+        {0,1}, {0,-1}, {-1,0}, {1,0}
     };
 
     // Diagonal basic movements, for move calculations

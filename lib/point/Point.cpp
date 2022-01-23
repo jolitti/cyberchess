@@ -1,3 +1,5 @@
+//Marco Giacomin 2016269
+
 #include "Point.h"
 
 namespace chess
