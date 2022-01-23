@@ -1,6 +1,7 @@
 //Diana Plosnita 2018526
 
 #include <iostream>
+#include <iomanip>
 #include <cstdlib>
 #include <ctime>
 #include <cstdio>
