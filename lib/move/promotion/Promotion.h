@@ -15,7 +15,7 @@ namespace chess
 
 	public:
 
-		Promotion(Point _start, Point _destination, color movingColor, pieceType type = queen);
+		Promotion(Point _start, Point _destination, color movingColor, pieceType type);
 
 		~Promotion() = default;
 

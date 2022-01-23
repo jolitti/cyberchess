@@ -8,6 +8,7 @@ project(Cyberchess)
 add_subdirectory(lib)
 
 add_executable(scacchiera mainScacchiera.cpp)
+add_executable(replay mainReplay.cpp)
 
 target_link_libraries(scacchiera PUBLIC Point)
 target_link_libraries(scacchiera PUBLIC Board)

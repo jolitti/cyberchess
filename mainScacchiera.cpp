@@ -5,6 +5,9 @@
 #include <ctime>
 #include <cstdio>
 #include <cstring>
+#include <fstream>
+#include <sstream>
+#include <string>
 
 #include "lib/movecalc/Movecalc.h"
 #include "lib/player/Player.h"
@@ -14,8 +17,17 @@ using namespace chess;
 
 int main(int argc, char* argv[])
 {
+	auto t = std::time(nullptr);
+	auto tm = *std::localtime(&t);
+
 	if(strcmp(argv[1], "cc") == 0)
 	{
+		ofstream logfile;
+		stringstream oss;
+		oss << std::put_time(&tm, "%d-%m-%Y_%H-%M-%S");
+		string file_name = "logfilechess" + oss.str() + ".txt";
+		logfile.open (file_name);
+
 		const unsigned int MAX_ITER = 50;
 		srand (time(NULL));
 
@@ -47,14 +59,24 @@ int main(int argc, char* argv[])
 				cout << "Exception caught!\n";
 				cout << e.what() << '\n';
 			}
+			logfile << h.getLastMove().toString() << "\n";
 			iter++;
 		}
 
-		cout << "Final state of the board: " << endl;
+		cout << "GAME END, final state of the board: " << endl;
 		cout << b << endl;
+		logfile << "GAME END";
+		logfile.close();
 	}
+
 	else if(strcmp(argv[1], "pc") == 0)
 	{
+		ofstream logfile;
+		stringstream oss;
+		oss << std::put_time(&tm, "%d-%m-%Y_%H-%M-%S");
+		string file_name = "logfilechess" + oss.str() + ".txt";
+		logfile.open(file_name);
+
 		srand (time(NULL));
 
 		Board b = Board();
@@ -79,9 +101,9 @@ int main(int argc, char* argv[])
 		cout << "Initial state of the board: " << endl;
 		cout << b << endl;
 
-		unsigned int iter = 0;
 		while (true)
 		{
+
 			auto possibleMoves = getLegalMoves(h);
 			if (possibleMoves.size() <= 0) break;
 
@@ -98,11 +120,16 @@ int main(int argc, char* argv[])
 				cout << "Exception caught!\n";
 				cout << e.what() << '\n';
 			}
-			iter++;
+
+			logfile << h.getLastMove().toString() << "\n";
+
 		}
 
-		cout << "Final state of the board: " << endl;
+		cout << "GAME END, final state of the board: " << endl;
 		cout << b << endl;
+		logfile << "GAME END";
+		logfile.close();
+
 	}
 
 	else 

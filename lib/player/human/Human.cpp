@@ -55,7 +55,9 @@ namespace chess
 				{
 					for(i=0; i<possibleMoves.size(); i++)
 					{
-						if(possibleMoves[i]->toString() == s_move)
+						string pos_move = possibleMoves[i]->toString();
+						transform(pos_move.begin(), pos_move.end(), pos_move.begin(), ::toupper);
+						if(pos_move == s_move)
 						{
 							flag = true;
 							break;

@@ -45,4 +45,9 @@ namespace chess
 		m->execute(board);
 		moves.push_back(std::move(m));
 	}
+
+	Move History::getLastMove() const
+	{
+		return *moves[moves.size()-1]; 
+	}
 }

@@ -37,6 +37,9 @@ namespace chess
         // Executes move and pushes it onto the moves vector
         void addMove(unique_ptr<Move> m);
 
+        //returns last move
+        Move getLastMove() const;
+
     };
 }
 
