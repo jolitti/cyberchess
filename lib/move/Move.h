@@ -23,7 +23,7 @@ namespace chess
         
     public:
         // Undesired, but causes an error in derived classes if removed
-        Move() = default;
+        Move();
 
         //Move(Piece& _toMove, Point _destination);
         Move (Point _start, Point _destination, color movingColor);
@@ -50,6 +50,8 @@ namespace chess
         // String representation from source to destination (e.g "A1 B2")
         virtual string toString() const;
 
+        // Provide a pointer to a new copy of this object (derived-friendly)
+        virtual Move* clone() const;
         virtual ~Move() = default;
     };
 }

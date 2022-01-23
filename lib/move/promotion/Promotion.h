@@ -15,7 +15,7 @@ namespace chess
 
 	public:
 
-		Promotion(Point _start, Point _destination, color movingColor, pieceType type = queen);
+		Promotion(Point _start, Point _destination, color movingColor, pieceType type);
 
 		~Promotion() = default;
 
@@ -25,6 +25,7 @@ namespace chess
 		//String representation from source to destination and promotion type(e.g "A1 B2 D")
 		string toString() const override;
 
+		Move* clone() const override;
 	};
 
 }

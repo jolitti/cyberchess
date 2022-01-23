@@ -4,6 +4,8 @@
 
 namespace chess
 {
+    Move::Move(): start{Point()},destination{Point()},hasBeenExecuted{false} {}
+
     Move::Move(Point _start, Point _destination, color _movingColor):
     start {_start}, destination {_destination}, movingColor {_movingColor}, hasBeenExecuted{false} {}
 
@@ -34,6 +36,12 @@ namespace chess
         piece movingPiece = b.getPieceAt(start);
         b.removePieceAt(start);
         b.setPieceAt(destination, movingPiece);
+    }
+
+    Move* Move::clone() const
+    {
+        Move newMove = Move(*this);
+        return &newMove;
     }
 }
 

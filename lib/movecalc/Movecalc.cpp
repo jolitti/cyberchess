@@ -11,6 +11,7 @@ namespace chess
         while (true)
         {
             Point newPos = startPos + dir*i;
+            //std::cout<<newPos<<'\n';
             if (!newPos.inBoard()) break;
             auto [type,col] = b.getPieceAt(newPos);
             if (type == none) ans.push_back(std::make_unique<Move>(Move(startPos,newPos,movingColor)));
@@ -20,6 +21,7 @@ namespace chess
                     ans.push_back(std::make_unique<Capture>(Capture(startPos,newPos,movingColor)));
                 break;
             }
+            i++;
         }
     }
 
@@ -44,6 +46,11 @@ namespace chess
         Board& b = h.getBoardRef();
         
         auto movingPieces = b.getPieces(movingColor);
+
+        // If king has been eaten, return empty vector to signal end of game to main()
+        bool hasKing = false;
+        for (auto[piecePair,pos] : movingPieces) if (piecePair.first == king) hasKing = true;
+        if (!hasKing) return ans;
 
         for (pair<piece,Point> p : movingPieces)
         {

@@ -4,6 +4,7 @@
 
 #include <ctype.h>
 #include <iostream>
+#include <algorithm>
 
 
 namespace chess
@@ -22,10 +23,10 @@ namespace chess
 
 	bool Human::check_special(const string& s_move) const
 	{
-		string s_emtpy = "";
-		if((s_empty + s_move[0] + s_move[1]) == "XX"  && 
+		string empty_s = "";
+		if((empty_s + s_move[0] + s_move[1]) == "XX"  && 
 			s_move[2] == ' ' &&
-			(s_empty + s_move[3] + s_move[4]) == "XX")
+			(empty_s + s_move[3] + s_move[4]) == "XX")
 			return true;
 
 		return false;
@@ -35,24 +36,29 @@ namespace chess
 	{
 
 		bool flag = false;
-		unique_ptr<Move> p = nullptr;
+		unsigned int i = 0;
 
 		while(flag == false)
 		{
+			cout << "Insert move ";
 			string s_move;
-			cin >> s_move;
+			getline(cin, s_move);
+			transform(s_move.begin(), s_move.end(), s_move.begin(), ::toupper);
 
 			if (check_special(s_move))
-				cout << historyRef.getBoardRef().toVerboseString(); 
+				cout << historyRef.getBoardRef().toString() << "\n"; 
 			else
 			{
 				if(!check_format(s_move))
 					cout << "invalid move format";
 				else
 				{
-					for(p : possibleMoves)
+					for(i=0; i<possibleMoves.size(); i++)
 					{
-						if(p->toString() == s_move)
+						string pos_move = possibleMoves[i]->toString();
+						transform(pos_move.begin(), pos_move.end(), pos_move.begin(), ::toupper);
+						if(pos_move == s_move)
+
 						{
 							flag = true;
 							break;
@@ -64,6 +70,7 @@ namespace chess
 			}
 		}
 
+		return std::move(possibleMoves[i]);
 		return std::move(p);
 	}
 }

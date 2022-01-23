@@ -8,7 +8,10 @@ namespace chess
 	History::History(Board& b)
 	: moves{}, board {b} {}
 
-	Board& History::getBoardRef() { return board; }
+	Board& History::getBoardRef() const
+	{ 
+		return board; 
+	}
 
 	color History::movingColor() const
 	{
@@ -41,5 +44,10 @@ namespace chess
 		std::cout << "Executing move "<< m->toString() << "\n";
 		m->execute(board);
 		moves.push_back(std::move(m));
+	}
+
+	Move History::getLastMove() const
+	{
+		return *moves[moves.size()-1]; 
 	}
 }

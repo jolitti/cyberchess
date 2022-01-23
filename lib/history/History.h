@@ -22,7 +22,7 @@ namespace chess
         ~History() = default;
 
         // Return reference to internal Board object
-        Board& getBoardRef();
+        Board& getBoardRef() const;
 
         // Return color of the player that has to move
         color movingColor() const;
@@ -36,6 +36,9 @@ namespace chess
 
         // Executes move and pushes it onto the moves vector
         void addMove(unique_ptr<Move> m);
+
+        //returns last move
+        Move getLastMove() const;
 
     };
 }

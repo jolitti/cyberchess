@@ -17,4 +17,10 @@ namespace chess
         b.removePieceAt(start);
         b.setPieceAt(destination, movingPiece);
     }
+
+    Capture* Capture::clone() const
+    {
+        Capture newCapture = Capture(*this);
+        return &newCapture;
+    }
 }
