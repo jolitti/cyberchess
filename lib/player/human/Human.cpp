@@ -58,17 +58,19 @@ namespace chess
 						string pos_move = possibleMoves[i]->toString();
 						transform(pos_move.begin(), pos_move.end(), pos_move.begin(), ::toupper);
 						if(pos_move == s_move)
+
 						{
 							flag = true;
 							break;
 						}
 					}
 					if(flag == false)
-						cout << "illegal move, try again" << "\n";
+						cout << "illegal move, try again";
 				}
 			}
 		}
 
 		return std::move(possibleMoves[i]);
+		return std::move(p);
 	}
 }
